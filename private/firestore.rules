@@ -1,0 +1,192 @@
+// ============================================================
+// Birthday Bash — Firestore rules · Version v27 · 2026-10-15 00:40 CDT
+// (matches index.html v27)
+// ============================================================
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isUser(uid) { return signedIn() && request.auth.uid == uid; }
+
+    // ===== ROLES =====
+    // SUPER ADMIN: the one email below. It is configuration, not a database record, so nothing in the app can remove or change it.
+    //   Keep it identical to SUPER_ADMIN_EMAIL in index.html. Whoever is named in BOTH places is the Super Admin.
+    function superAdminEmail() { return 'spcyuvaraj@gmail.com'; }
+    function verifiedEmail() { return signedIn() && request.auth.token.email_verified == true ? request.auth.token.email.lower() : ''; }
+    function isSuperAdmin() { return verifiedEmail() == superAdminEmail(); }
+    // ADMIN: Super Admin, or an email with a document at admins/{email} (lower-case). Only the Super Admin can create/delete those documents.
+    function isAdmin() {
+      return isSuperAdmin()
+        || (verifiedEmail() != '' && exists(/databases/$(database)/documents/admins/$(verifiedEmail())));
+    }
+
+    // A guest answering through their personal link may change only these fields.
+    function guestReply() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'name', 'count', 'respondedAt'])
+        && request.resource.data.status in ['accepted', 'declined']
+        && request.resource.data.get('count', 0) is int
+        && request.resource.data.get('count', 0) >= 0
+        && request.resource.data.get('count', 0) <= 20
+        && request.resource.data.name is string
+        && request.resource.data.name.size() <= 100;
+    }
+
+    // ===== Platform configuration (admin-managed) =====
+    match /config/{doc} {
+      allow get: if true;                         // everyone must be able to see the maintenance flag
+      allow write: if isAdmin();
+    }
+    match /admins/{email} {
+      allow get: if verifiedEmail() == email || isAdmin();     // you can check your own admin status
+      allow list: if isAdmin();
+      allow write: if isSuperAdmin() && email != superAdminEmail();   // only the Super Admin adds/removes admins
+    }
+    match /plans/{planId} {
+      allow read: if signedIn();                  // hosts read their plan's limits
+      allow write: if isAdmin();
+    }
+    match /discounts/{code} {
+      allow get: if request.auth != null;           // a signed-in user can check one exact code (codes can't be listed)
+      allow list, write: if isAdmin();
+    }
+
+    // Admin dashboards read every host's subscriptions (metrics, Clients tab).
+    match /{path=**}/subscriptions/{sid} {
+      allow read: if isAdmin();
+    }
+
+    // Admin Users tab reads an expanded host's guest lists (the screen shows addresses to the Super Admin only).
+    match /{path=**}/guests/{gid} {
+      allow read: if isAdmin();
+    }
+
+    // Admin dashboards count parties across all hosts (collection-group query).
+    match /{path=**}/parties/{pid} {
+      allow read: if isAdmin();
+    }
+
+    // ----- The host's plan: users/{uid}.planId (set by admins), else their one self-service 'free-signup' subscription -----
+    function hostPlanId(uid) {
+      return get(/databases/$(database)/documents/users/$(uid)).data.get('planId', '') != ''
+        ? get(/databases/$(database)/documents/users/$(uid)).data.planId
+        : (exists(/databases/$(database)/documents/users/$(uid)/subscriptions/free-signup)
+            ? get(/databases/$(database)/documents/users/$(uid)/subscriptions/free-signup).data.planId : '');
+    }
+    function planDoc(uid) {
+      return hostPlanId(uid) != '' && exists(/databases/$(database)/documents/plans/$(hostPlanId(uid)))
+        ? get(/databases/$(database)/documents/plans/$(hostPlanId(uid))).data : {};
+    }
+    function planAllowsDelete(uid) {
+      return exists(/databases/$(database)/documents/users/$(uid)) && planDoc(uid).get('canDeleteParties', false) == true;
+    }
+
+    // ----- Email invitations: entry n of a party's log is allowed only if entry n-max is older than the cooling period -----
+    // (max = plan "maxEmailsPerParty", null = unlimited; period = plan "cooldownHours"). Entries can never be edited or deleted.
+    function inviteLimits(uid) { return planDoc(uid).get('limits', {}); }
+    function inviteWindowOk(uid, pid, k) {
+      return inviteLimits(uid).get('maxEmailsPerParty', 10) == null
+        || k < inviteLimits(uid).get('maxEmailsPerParty', 10)
+        || get(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(k - inviteLimits(uid).get('maxEmailsPerParty', 10)))).data.createdAt
+             < request.time - duration.value(inviteLimits(uid).get('cooldownHours', 24), 'h');
+    }
+    function inviteAllowed(uid, pid, n) {
+      return n.matches('[0-9]+')
+        && (int(n) == 0 || exists(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(int(n) - 1))))
+        && (isAdmin() || inviteWindowOk(uid, pid, int(n)));
+    }
+    // ----- Lifetime party limit: log entry n is allowed only while n < the plan's total-party limit (null = unlimited) -----
+    function partyLogAllowed(uid, n) {
+      return n.matches('[0-9]+')
+        && (int(n) == 0 || exists(/databases/$(database)/documents/users/$(uid)/partyLog/$(string(int(n) - 1))))
+        && (isAdmin() || planDoc(uid).get('limits', {}).get('maxParties', 10) == null
+            || int(n) < planDoc(uid).get('limits', {}).get('maxParties', 10));
+    }
+    // A party still in the old top-level collection (not yet moved) may have its guests copied over without an invitation entry.
+    function legacyUnmoved(pid) {
+      return exists(/databases/$(database)/documents/parties/$(pid))
+        && get(/databases/$(database)/documents/parties/$(pid)).data.ownerUid == request.auth.uid
+        && !('movedTo' in get(/databases/$(database)/documents/parties/$(pid)).data);
+    }
+
+    // ===== Hosts: users/{uid}/parties/{pid}/guests/{gid} — ownership is the path =====
+    match /users/{uid} {
+      // Subscriptions: a host may read their own, and create exactly ONE self-service record ('free-signup') for a free plan.
+      // Everything else (paid plans, changes, cancellations) is admin-only. One free signup per account = that fixed document id.
+      match /subscriptions/{sid} {
+        allow read: if isUser(uid) || isAdmin();
+        allow create: if (isUser(uid) && sid == 'free-signup'
+                          && request.resource.data.status == 'active'
+                          && request.resource.data.get('source', '') == 'self'
+                          && get(/databases/$(database)/documents/plans/$(request.resource.data.planId)).data.get('price', 0) == 0)
+                      || isAdmin();
+        allow update, delete: if isAdmin();
+      }
+      allow get, list: if isUser(uid) || isAdmin();
+      allow create: if isUser(uid) && !request.resource.data.keys().hasAny(['planId', 'currentSubscriptionId']);   // a host can't pick their own plan
+      // Admins may change a client's plan — but nobody except the Super Admin may touch the Super Admin's own profile record.
+      allow update: if (isAdmin() && (isSuperAdmin() || resource.data.get('email', '').lower() != superAdminEmail()))
+        || (isUser(uid) && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['planId', 'currentSubscriptionId']));
+      allow delete: if isAdmin() && resource.data.get('email', '').lower() != superAdminEmail();
+
+      // One create-only entry per party ever created — deleting a party never removes its entry.
+      match /partyLog/{n} {
+        allow read: if isUser(uid) || isAdmin();
+        allow create: if isUser(uid) && partyLogAllowed(uid, n)
+          && request.resource.data.keys().hasOnly(['partyId', 'createdAt'])
+          && request.resource.data.createdAt == request.time;
+        allow update, delete: if false;
+      }
+
+      match /parties/{pid} {
+        allow get: if true;                       // guests open an invitation by exact id
+        allow list: if isUser(uid);
+        // Creating: every party comes with its numbered log entry (written in the same batch). Updating: the owner.
+        allow create: if isUser(uid) && (
+            (existsAfter(/databases/$(database)/documents/users/$(uid)/partyLog/$(string(request.resource.data.logSeq)))
+             && getAfter(/databases/$(database)/documents/users/$(uid)/partyLog/$(string(request.resource.data.logSeq))).data.partyId == pid)
+            || legacyUnmoved(pid));
+        allow update: if isUser(uid);
+        // Deleting a party: admins, or hosts whose plan has "canDeleteParties" (VIP). Everyone else is refused.
+        allow delete: if isUser(uid) && (isAdmin() || planAllowsDelete(uid));
+
+        // Every guest is created together with its numbered invitation-log entry (written in the same batch).
+        match /guests/{gid} {
+          allow get: if true;                     // gid is an unguessable id that lives only in the guest's link
+          allow list, delete: if isUser(uid);
+          allow create: if isUser(uid) && (
+              (existsAfter(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(request.resource.data.inviteSeq)))
+               && getAfter(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(request.resource.data.inviteSeq))).data.guestId == gid)
+              || legacyUnmoved(pid));
+          allow update: if isUser(uid) || guestReply();
+        }
+
+        match /invites/{n} {
+          allow read: if isUser(uid) || isAdmin();
+          allow create: if isUser(uid) && inviteAllowed(uid, pid, n)
+            && request.resource.data.keys().hasOnly(['email', 'guestId', 'createdAt'])
+            && request.resource.data.createdAt == request.time;
+          allow update, delete: if false;
+        }
+      }
+    }
+
+    // ===== Legacy (v16 and older): top-level parties — kept only so old links work and old parties can be migrated =====
+    function isLegacyOwner(pid) {
+      return signedIn() && get(/databases/$(database)/documents/parties/$(pid)).data.ownerUid == request.auth.uid;
+    }
+    match /parties/{pid} {
+      allow get: if true;
+      allow list: if signedIn() && resource.data.ownerUid == request.auth.uid;
+      allow create: if false;                     // no new parties here
+      allow update, delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
+
+      match /guests/{gid} {
+        allow get: if true;
+        allow list, delete: if isLegacyOwner(pid);
+        allow create: if false;
+        allow update: if isLegacyOwner(pid) || guestReply();
+      }
+    }
+  }
+}

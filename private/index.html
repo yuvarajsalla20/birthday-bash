@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<!-- Birthday Bash — version v27 — generated 2026-10-15 00:40 CDT -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birthday Bash</title>
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js">
+<link rel="modulepreload" href="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js">
+
+<style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.icon-btn{display:inline-flex;height:2.25rem;width:2.25rem;flex-shrink:0;align-items:center;justify-content:center;border-radius:.5rem;--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1));transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.icon-btn:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1));--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.icon-btn:focus-visible{outline-style:solid;outline-width:2px;outline-color:#6366f1}@media (prefers-reduced-motion:reduce){.icon-btn{transition-property:none}}.nav-link{display:flex;width:100%;align-items:center;gap:.75rem;border-radius:.5rem;padding:.5rem .75rem;font-size:.875rem;line-height:1.25rem;font-weight:500;--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1));transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.nav-link:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1));--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.nav-link:focus-visible{outline-style:solid;outline-width:2px;outline-color:#6366f1}@media (prefers-reduced-motion:reduce){.nav-link{transition-property:none}}.nav-link[aria-current=page]{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1));--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.card,.party-card{border-radius:.75rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1));--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1));padding:1.25rem;--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.party-card{display:block;min-width:0;max-width:100%;cursor:pointer;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.party-card:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-border-opacity:1;border-color:rgb(165 180 252/var(--tw-border-opacity,1));--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);--tw-shadow-color:#e0e7ff;--tw-shadow:var(--tw-shadow-colored)}.party-card:focus-visible{outline-style:solid;outline-width:2px;outline-color:#6366f1}.party-card:active{--tw-translate-y:0px;--tw-scale-x:0.98;--tw-scale-y:0.98;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}@media (prefers-reduced-motion:reduce){.party-card{transition-property:none}.party-card:hover{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}.field{margin-top:.25rem;width:100%;border-radius:.5rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1));padding:.5rem .75rem}.btn-primary{border-radius:.75rem;background-image:linear-gradient(to right,var(--tw-gradient-stops));--tw-gradient-from:#ec4899 var(--tw-gradient-from-position);--tw-gradient-to:rgba(236,72,153,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to);--tw-gradient-to:#f59e0b var(--tw-gradient-to-position);padding:.625rem 1rem;font-weight:600;--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1));--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.btn-primary:hover{opacity:.9}.btn-soft{border-radius:.5rem;--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1));padding:.375rem .75rem;font-size:.875rem;line-height:1.25rem;--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.btn-soft:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.btn-line{border-radius:.5rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1));padding:.375rem .75rem;font-size:.875rem;line-height:1.25rem}.btn-line:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.collapse{visibility:collapse}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-y-0{top:0;bottom:0}.-top-3{top:-.75rem}.bottom-12{bottom:3rem}.left-0{left:0}.left-0\.5{left:.125rem}.left-1\/2{left:50%}.left-\[1\.4rem\]{left:1.4rem}.top-0{top:0}.top-0\.5{top:.125rem}.z-20{z-index:20}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.col-span-2{grid-column:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-auto{margin-left:auto}.mr-1{margin-right:.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:.5rem}.mt-20{margin-top:5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-square{aspect-ratio:1/1}.h-16{height:4rem}.h-2{height:.5rem}.h-20{height:5rem}.h-3{height:.75rem}.h-32{height:8rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-72{height:18rem}.h-9{height:2.25rem}.min-h-screen{min-height:100vh}.\!w-32{width:8rem!important}.w-11{width:2.75rem}.w-12{width:3rem}.w-20{width:5rem}.w-24{width:6rem}.w-32{width:8rem}.w-40{width:10rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-9{width:2.25rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-5xl{max-width:64rem}.max-w-\[28\%\]{max-width:28%}.max-w-full{max-width:100%}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.gap-y-1{row-gap:.25rem}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.break-all{word-break:break-all}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.\!border-rose-500{--tw-border-opacity:1!important;border-color:rgb(244 63 94/var(--tw-border-opacity,1))!important}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77/var(--tw-border-opacity,1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.border-pink-200{--tw-border-opacity:1;border-color:rgb(251 207 232/var(--tw-border-opacity,1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.\!bg-amber-100{--tw-bg-opacity:1!important;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))!important}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-black\/50{background-color:rgba(0,0,0,.5)}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94/var(--tw-bg-opacity,1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity,1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-pink-50{--tw-bg-opacity:1;background-color:rgb(253 242 248/var(--tw-bg-opacity,1))}.bg-pink-500{--tw-bg-opacity:1;background-color:rgb(236 72 153/var(--tw-bg-opacity,1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94/var(--tw-bg-opacity,1))}.bg-sky-100{--tw-bg-opacity:1;background-color:rgb(224 242 254/var(--tw-bg-opacity,1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-500{--tw-bg-opacity:1;background-color:rgb(100 116 139/var(--tw-bg-opacity,1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/40{background-color:rgba(15,23,42,.4)}.bg-violet-100{--tw-bg-opacity:1;background-color:rgb(237 233 254/var(--tw-bg-opacity,1))}.bg-violet-500{--tw-bg-opacity:1;background-color:rgb(139 92 246/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/80{background-color:hsla(0,0%,100%,.8)}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-pink-400{--tw-gradient-from:#f472b6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(244,114,182,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-pink-500{--tw-gradient-from:#ec4899 var(--tw-gradient-from-position);--tw-gradient-to:rgba(236,72,153,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-amber-300{--tw-gradient-to:rgba(252,211,77,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#fcd34d var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-amber-500{--tw-gradient-to:#f59e0b var(--tw-gradient-to-position)}.to-indigo-400{--tw-gradient-to:#818cf8 var(--tw-gradient-to-position)}.object-cover{-o-object-fit:cover;object-fit:cover}.\!p-0{padding:0!important}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.\!px-2{padding-left:.5rem!important;padding-right:.5rem!important}.\!py-2{padding-top:.5rem!important;padding-bottom:.5rem!important}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-10{padding-bottom:2.5rem}.pb-2{padding-bottom:.5rem}.pt-3{padding-top:.75rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}.text-\[10px\]{font-size:10px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.lowercase{text-transform:lowercase}.italic{font-style:italic}.leading-tight{line-height:1.25}.tracking-widest{letter-spacing:.1em}.\!text-amber-900{--tw-text-opacity:1!important;color:rgb(120 53 15/var(--tw-text-opacity,1))!important}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.text-pink-500{--tw-text-opacity:1;color:rgb(236 72 153/var(--tw-text-opacity,1))}.text-pink-600{--tw-text-opacity:1;color:rgb(219 39 119/var(--tw-text-opacity,1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94/var(--tw-text-opacity,1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72/var(--tw-text-opacity,1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60/var(--tw-text-opacity,1))}.text-sky-700{--tw-text-opacity:1;color:rgb(3 105 161/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-violet-700{--tw-text-opacity:1;color:rgb(109 40 217/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-50{opacity:.5}.opacity-90{opacity:.9}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-1,.ring-2{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-pink-500{--tw-ring-opacity:1;--tw-ring-color:rgb(236 72 153/var(--tw-ring-opacity,1))}.ring-slate-100{--tw-ring-opacity:1;--tw-ring-color:rgb(241 245 249/var(--tw-ring-opacity,1))}.blur{--tw-blur:blur(8px)}.blur,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-150,.transition-colors{transition-duration:.15s}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-indigo-300:hover{--tw-border-opacity:1;border-color:rgb(165 180 252/var(--tw-border-opacity,1))}.hover\:\!bg-amber-200:hover{--tw-bg-opacity:1!important;background-color:rgb(253 230 138/var(--tw-bg-opacity,1))!important}.hover\:bg-emerald-600:hover{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74/var(--tw-bg-opacity,1))}.hover\:bg-indigo-100:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202/var(--tw-bg-opacity,1))}.hover\:bg-pink-600:hover{--tw-bg-opacity:1;background-color:rgb(219 39 119/var(--tw-bg-opacity,1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.hover\:bg-rose-50:hover{--tw-bg-opacity:1;background-color:rgb(255 241 242/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:opacity-90:hover{opacity:.9}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-indigo-100:hover{--tw-shadow-color:#e0e7ff;--tw-shadow:var(--tw-shadow-colored)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-pink-400:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(244 114 182/var(--tw-ring-opacity,1))}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-indigo-500:focus-visible{outline-color:#6366f1}.active\:translate-y-0:active{--tw-translate-y:0px}.active\:scale-\[0\.98\]:active,.active\:translate-y-0:active{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98}.active\:bg-indigo-50:active{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241/var(--tw-text-opacity,1))}@media (prefers-reduced-motion:reduce){.motion-reduce\:transition-none{transition-property:none}}@media (min-width:640px){.sm\:col-span-1{grid-column:span 1/span 1}.sm\:col-span-2{grid-column:span 2/span 2}.sm\:w-28{width:7rem}.sm\:max-w-2xl{max-width:42rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.sm\:grid-cols-\[1fr_1fr_auto\]{grid-template-columns:1fr 1fr auto}.sm\:flex-row{flex-direction:row}.sm\:items-end{align-items:flex-end}.sm\:self-end{align-self:flex-end}.sm\:p-6{padding:1.5rem}.sm\:py-10{padding-top:2.5rem;padding-bottom:2.5rem}}@media (min-width:768px){.md\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1024px){.lg\:col-span-5{grid-column:span 5/span 5}.lg\:inline-flex{display:inline-flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:p-8{padding:2rem}}</style>
+<style>
+  [hidden] { display: none !important; }
+  :root { --sb-w: 16rem; --sb-w-rail: 4.5rem; --sb-ease: 300ms cubic-bezier(.4, 0, .2, 1); }
+  .guest-bg { background: linear-gradient(135deg,#fdf2f8 0%,#eef2ff 50%,#fffbeb 100%); }
+  .confetti { background-image: radial-gradient(#f472b6 2px,transparent 2px),radial-gradient(#fbbf24 2px,transparent 2px),radial-gradient(#818cf8 2px,transparent 2px);
+    background-size: 40px 40px, 56px 56px, 72px 72px; background-position: 0 0, 18px 22px, 34px 8px; opacity:.25; }
+
+  #sidebar { width: var(--sb-w); transform: translateX(-100%); transition: transform var(--sb-ease), width var(--sb-ease); }
+  #shell[data-open="true"] #sidebar { transform: none; }
+  #overlay { opacity: 0; pointer-events: none; transition: opacity var(--sb-ease); }
+  #shell[data-open="true"] #overlay { opacity: 1; pointer-events: auto; }
+  @media (min-width: 1024px) {
+    #sidebar { transform: none; }
+    #overlay { display: none; }
+    #content { padding-left: var(--sb-w); transition: padding-left var(--sb-ease); }
+    #shell[data-collapsed="true"] #sidebar { width: var(--sb-w-rail); }
+    #shell[data-collapsed="true"] #content { padding-left: var(--sb-w-rail); }
+    #shell[data-collapsed="true"] .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    #shell[data-collapsed="true"] .nav-link,
+    #shell[data-collapsed="true"] .sb-row { justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { #sidebar, #overlay, #content { transition: none; } }
+</style>
+</head>
+
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+<!-- Guest invitation + sign-in screens (no sidebar) -->
+<div id="guestRoot" class="guest-bg relative flex min-h-screen flex-col">
+  <div class="confetti pointer-events-none fixed inset-0"></div>
+  <div id="app" class="relative mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-10"></div>
+  <footer class="relative border-t border-gray-300 bg-gray-200 py-2 text-center text-xs text-gray-600">Version v27 · 2026-10-15 00:40 CDT</footer>
+</div>
+
+<!-- Organizer shell: sidebar + routed content -->
+<div id="shell" data-open="false" data-collapsed="false" hidden>
+  <div id="overlay" data-action="close" class="fixed inset-0 z-30 bg-slate-900/40" aria-hidden="true"></div>
+
+  <aside id="sidebar" aria-label="Primary" class="fixed inset-y-0 left-0 z-40 flex flex-col overflow-hidden border-r border-slate-200 bg-white">
+    <div class="sb-row flex h-16 shrink-0 items-center gap-3 border-b border-slate-200 px-5">
+      <span class="text-2xl" aria-hidden="true">🎂</span>
+      <span id="appName" class="label truncate text-base font-semibold"></span>
+    </div>
+    <nav id="nav" aria-label="Main" class="flex-1 space-y-1 overflow-y-auto p-3"></nav>
+    <div class="shrink-0 space-y-2 border-t border-slate-200 p-3">
+      <div class="sb-row flex items-center gap-3 px-2 py-1">
+        <span id="userAvatar" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700" aria-hidden="true"></span>
+        <span class="label min-w-0 text-sm leading-tight">
+          <span id="userName" class="block truncate font-medium"></span>
+          <span id="userEmail" class="block truncate text-xs text-slate-500"></span>
+          <span id="userRole" class="mt-0.5 hidden rounded-full bg-violet-100 px-2 py-0.5 text-[10px] font-semibold text-violet-700"></span>
+        </span>
+      </div>
+      <button type="button" data-action="signout" class="nav-link" title="Sign out"><span id="signoutIcon"></span><span class="label truncate">Sign out</span></button>
+    </div>
+  </aside>
+
+  <div id="content" class="flex min-h-screen flex-col">
+    <header class="sticky top-0 z-20 flex h-16 shrink-0 items-center gap-2 border-b border-slate-200 bg-white/80 px-4 backdrop-blur">
+      <button id="menuBtn" data-action="open" class="icon-btn lg:hidden" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"></button>
+      <button id="collapseBtn" data-action="collapse" class="icon-btn hidden lg:inline-flex" aria-controls="sidebar" aria-expanded="true"></button>
+      <h1 id="pageTitle" class="truncate text-base font-semibold"></h1>
+    </header>
+    <main id="main" tabindex="-1" class="mx-auto w-full max-w-5xl flex-1 p-4 focus:outline-none sm:p-6 lg:p-8"></main>
+    <footer class="border-t border-gray-300 bg-gray-200 py-2 text-center text-xs text-gray-600">Version v27 · 2026-10-15 00:40 CDT</footer>
+  </div>
+</div>
+
+<div id="nameModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6">
+    <h3 class="text-xl font-bold mb-1">🎉 Great, you're coming!</h3>
+    <p class="text-sm text-slate-500 mb-4">Please tell us your full name to confirm.</p>
+    <input id="guestNameInput" type="text" maxlength="100" placeholder="Full name" class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400">
+    <p id="nameErr" class="hidden text-sm text-red-600 mt-1">Please enter your name.</p>
+    <label class="text-sm font-medium block mt-3">How many people will attend (including you)?</label>
+    <input id="guestCountInput" type="number" min="1" max="20" value="1" inputmode="numeric" class="w-full border border-slate-300 rounded-lg px-3 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-pink-400">
+    <div class="flex gap-2 mt-4">
+      <button id="nameCancel" class="flex-1 py-2 rounded-lg border border-slate-300 hover:bg-slate-50">Back</button>
+      <button id="nameConfirm" class="flex-1 py-2 rounded-lg bg-pink-500 text-white font-semibold hover:bg-pink-600">Confirm</button>
+    </div>
+  </div>
+</div>
+<div id="toast" class="hidden fixed bottom-12 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-sm px-4 py-2 rounded-full shadow-lg z-50"></div>
+
+<script type="module">
+// Firebase loads in parallel; the public invitation page (guests) skips the sign-in module entirely.
+const FB_URL = 'https://www.gstatic.com/firebasejs/10.14.1/';
+const isGuestPage = new URLSearchParams(location.search).has('partyId') && new URLSearchParams(location.search).has('t');
+const [{ initializeApp }, fsMod, authMod] = await Promise.all([import(FB_URL + 'firebase-app.js'), import(FB_URL + 'firebase-firestore.js'), isGuestPage ? null : import(FB_URL + 'firebase-auth.js')]);
+const { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager, doc, getDoc, setDoc, updateDoc, deleteDoc, collection, collectionGroup, query, where, getDocs, getCountFromServer, onSnapshot, serverTimestamp, increment, writeBatch } = fsMod;
+const { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } = authMod || {};
+
+/* =====================================================================================================
+   ARCHITECTURE MAP  (each layer maps to a folder when you move to React; layers only depend downwards)
+
+   Layer 0  CONFIG        constants below                                   -> src/config.js
+   Layer 1  RULES (pure)  PartyRules, AdminRules, PlanRules, DiscountRules  -> src/rules/*.js      (no DOM, no Firebase)
+   Layer 2  FORMAT        esc, fmtDate, countdownText, … helpers            -> src/lib/format.js
+   Layer 3  DATA (Repo)   `Repo` — the ONLY code that touches Firebase      -> src/data/repo.js   (hooks call Repo)
+   Layer 4  SCREENS       guestView, host routes, admin screens             -> src/pages/*.jsx
+   Layer 5  SHELL         sidebar, gate (sign-in / maintenance), router     -> src/App.jsx + layout
+
+   Swapping Firebase for another backend = rewrite Layer 3 only. Screens never import Firebase functions.
+   ===================================================================================================== */
+
+/* =====================  1. CONFIG  ===================== */
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyABBchd5dHH4YAC-N_1eljDz_FPh2q-P6o",
+  authDomain: "h-20-11-2016.firebaseapp.com",
+  projectId: "h-20-11-2016",
+  storageBucket: "h-20-11-2016.firebasestorage.app",
+  messagingSenderId: "1093741276700",
+  appId: "1:1093741276700:web:f104b6afbda9ae162839d9"
+};
+// EmailJS (emailjs.com) — the template's "To email" is fixed to YOUR inbox inside EmailJS.
+const EMAILJS = { publicKey: "GqYGn_Upy1-rWzrMf", serviceId: "service_20112016", templateId: "template_20112016", inviteTemplateId: "template_20112016" };
+// The inbox that receives "guest accepted/declined" alerts.
+const HOST_EMAIL = "spcyuvaraj@gmail.com";
+// The permanent Super Admin. Keep identical to superAdminEmail() in firestore.rules — whoever is named in BOTH places is Super Admin.
+const SUPER_ADMIN_EMAIL = "spcyuvaraj@gmail.com";
+const APP_NAME = 'Birthday Bash';
+const COLLAPSE_KEY = 'sidebar-collapsed';
+/* ======================================================= */
+
+const $ = (s, r = document) => r.querySelector(s);
+const app = $('#app');
+const params = new URLSearchParams(location.search);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+const toast = (m, ms = 2400) => { const t = $('#toast'); t.textContent = m; t.classList.remove('hidden'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.add('hidden'), ms); };
+const fmtDate = (v) => v ? new Date(v).toLocaleString(undefined, { dateStyle: 'full', timeStyle: 'short' }) : '';
+const fmtBirth = (v) => { if (!v) return ''; const [y, m] = v.split('-'); return new Date(y, m - 1, 1).toLocaleString(undefined, { month: 'long', year: 'numeric' }); };
+// Age the birthday person is turning in the party's year (birth is "YYYY-MM").
+const turning = (birth, when) => {
+  if (!birth || !when) return null;
+  const n = new Date(when).getFullYear() - Number(birth.split('-')[0]);
+  return n > 0 && n < 130 ? n : null;
+};
+const ord = (n) => { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); };
+// ---- map / calendar / countdown helpers ----
+const mapUrl = (v) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(v || '');
+const pad2 = (n) => String(n).padStart(2, '0');
+const calStamp = (d) => `${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}T${pad2(d.getHours())}${pad2(d.getMinutes())}00`;
+// Uses the host's end time when it is after the start; otherwise defaults to 2 hours.
+const calRange = (p) => { const s = new Date(p.when); const e = p.endWhen ? new Date(p.endWhen) : null; return [s, e && e > s ? e : new Date(s.getTime() + 2 * 3600 * 1000)]; };
+const calDetails = (p) => [p.note || 'Birthday party!', p.theme ? 'Dress code / theme: ' + p.theme : '', p.phone ? 'Host phone: ' + p.phone : ''].filter(Boolean).join('\n');
+const fmtTime = (d) => d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+const fmtRange = (start, end) => {
+  if (!start) return '';
+  if (!end) return fmtDate(start);
+  const s = new Date(start), e = new Date(end);
+  if (!(e > s)) return fmtDate(start);
+  return s.toDateString() === e.toDateString() ? fmtDate(start) + ' – ' + fmtTime(e) : fmtDate(start) + ' → ' + fmtDate(end);
+};
+const fmtDay = (v) => v ? new Date(v + 'T00:00').toLocaleDateString(undefined, { dateStyle: 'long' }) : '';
+const rsvpPassed = (v) => v ? Date.now() > new Date(v + 'T23:59:59').getTime() : false;
+const telHref = (v) => 'tel:' + String(v || '').replace(/[^\d+]/g, '');
+const calTitle = (p) => { const t = turning(p.birth, p.when); return `${p.name}'s ${t ? ord(t) + ' ' : ''}Birthday 🎂`; };
+const googleCalUrl = (p) => {
+  const [s, e] = calRange(p);
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(calTitle(p)) +
+    '&dates=' + calStamp(s) + '/' + calStamp(e) +
+    '&details=' + encodeURIComponent(calDetails(p)) +
+    '&location=' + encodeURIComponent(p.venue || '');
+};
+const icsText = (s) => String(s || '').replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1').replace(/\r?\n/g, '\\n');
+const downloadIcs = (p, id) => {
+  const [s, e] = calRange(p);
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Birthday Bash//EN', 'BEGIN:VEVENT',
+    'UID:' + id + '@birthday-rsvp', 'DTSTAMP:' + new Date().toISOString().replace(/[-:]|\.\d{3}/g, ''),
+    'DTSTART:' + calStamp(s), 'DTEND:' + calStamp(e), 'SUMMARY:' + icsText(calTitle(p)),
+    'LOCATION:' + icsText(p.venue), 'DESCRIPTION:' + icsText(calDetails(p)), 'END:VEVENT', 'END:VCALENDAR'];
+  const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'birthday-party.ics';
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+};
+const countdownText = (when) => {
+  if (!when) return '';
+  const ms = new Date(when).getTime() - Date.now();
+  if (ms <= -3 * 3600 * 1000) return '🎉 This party has already happened';
+  if (ms <= 0) return "🎉 It's party time!";
+  const d = Math.floor(ms / 864e5), h = Math.floor((ms % 864e5) / 36e5), m = Math.floor((ms % 36e5) / 6e4);
+  if (d > 0) return `⏳ ${d} day${d > 1 ? 's' : ''}, ${h} hr${h !== 1 ? 's' : ''} to go!`;
+  return `⏳ ${h} hr ${m} min to go!`;
+};
+const placeholderImg ='data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#fbcfe8"/><text x="200" y="230" font-size="140" text-anchor="middle">🎂</text></svg>');
+const baseUrl = () => location.origin + location.pathname;   // never duplicates prefixes
+const copy = (text) => {
+  (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+    .then(() => toast('Link copied'))
+    .catch(() => { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); toast('Link copied'); } catch { prompt('Copy this link:', text); } t.remove(); });
+};
+
+/* =====================================================================
+   PARTY RULES — pure business logic. NO DOM, NO Firebase, NO globals.
+   Every function takes plain data (and an optional `now` for testing) and returns plain data.
+   Migration: move this whole block to `partyRules.js` and `export` it
+   (React/Vue import it as-is; a backend API can reuse the same rules).
+   ===================================================================== */
+const PartyRules = (() => {
+  const STATUS = Object.freeze({ UPCOMING: 'Upcoming', ACTIVE: 'Active', CLOSED: 'Closed' });
+  const pad = (n) => String(n).padStart(2, '0');
+
+  // "YYYY-MM-DDTHH:mm" (datetime-local value) -> Date, or null when empty/invalid.
+  const parseLocal = (v) => { if (!v) return null; const d = new Date(v); return isNaN(d) ? null : d; };
+  const floorToMinute = (d) => { const x = new Date(d); x.setSeconds(0, 0); return x; };
+  const toLocalInput = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+
+  // The moment a party stops counting: its end, or its start when there is no (valid) end.
+  const partyEnd = (party) => {
+    const s = parseLocal(party.when), e = parseLocal(party.endWhen);
+    return e && s && e >= s ? e : s;
+  };
+
+  // Upcoming: not started yet · Active: started, end not reached · Closed: end (or start, if no end) has passed.
+  const getEventStatus = (party, now = new Date()) => {
+    const s = parseLocal(party.when), e = partyEnd(party);
+    if (!s || !e) return STATUS.CLOSED;
+    if (now >= e) return STATUS.CLOSED;
+    if (now >= s) return STATUS.ACTIVE;
+    return STATUS.UPCOMING;
+  };
+  const isClosed = (party, now) => getEventStatus(party, now) === STATUS.CLOSED;
+
+  // Active + upcoming (soonest first) vs closed archive (most recently finished first).
+  const splitByStatus = (parties, now = new Date()) => {
+    const open = [], closed = [];
+    parties.forEach((p) => (isClosed(p, now) ? closed : open).push(p));
+    open.sort((a, b) => parseLocal(a.when) - parseLocal(b.when));
+    closed.sort((a, b) => partyEnd(b) - partyEnd(a));
+    return { open, closed };
+  };
+
+  // Guest tally for one party.
+  const tally = (guests) => {
+    const c = { total: guests.length, accepted: 0, declined: 0, pending: 0, people: 0 };
+    guests.forEach((g) => { c[g.status]++; if (g.status === 'accepted') c.people += (g.count || 1); });
+    return c;
+  };
+  // Dashboard summary: counts ONLY the parties passed in (callers pass the non-closed ones).
+  const summarizeParties = (parties, guestsByParty) => {
+    const c = PartyRules.tally(parties.flatMap((p) => guestsByParty[p.id] || []));
+    return { parties: parties.length, ...c };
+  };
+
+  /* ---- Form rules ---- */
+  const MSG = {
+    name:    'Please enter a party title / name.',
+    birth:   'Please pick the birth month and year.',
+    when:    'Please choose when the party starts.',
+    past:    'The start can’t be in the past — choose the current time or later.',
+    end:     'The end can’t be earlier than the start.',
+    venue:   'Please enter the venue or address.',
+    rsvp:    'The RSVP deadline must be on or before the party day.',
+  };
+  const FIELD_ORDER = ['name', 'birth', 'when', 'endWhen', 'venue', 'rsvpBy'];
+
+  // values: { name, birth, when, endWhen, venue, rsvpBy } (strings).  ctx: { now, original } — `original` is the saved
+  // party when editing, so an unchanged (already past) start isn't rejected.
+  const validateParty = (values, { now = new Date(), original = null } = {}) => {
+    const errors = {};
+    const s = parseLocal(values.when);
+    if (!(values.name || '').trim()) errors.name = MSG.name;
+    if (!values.birth) errors.birth = MSG.birth;
+    if (!values.when || !s) errors.when = MSG.when;
+    else if (!(original && values.when === original.when) && s < floorToMinute(now)) errors.when = MSG.past;
+    const e = parseLocal(values.endWhen);
+    if (e && s && e < s) errors.endWhen = MSG.end;
+    if (!(values.venue || '').trim()) errors.venue = MSG.venue;
+    if (values.rsvpBy && values.when && values.rsvpBy > values.when.slice(0, 10)) errors.rsvpBy = MSG.rsvp;
+    const firstInvalid = FIELD_ORDER.find((k) => errors[k]) || null;
+    return { errors, firstInvalid, valid: !firstInvalid };
+  };
+
+  // Bounds for the date pickers so invalid choices are greyed out (the rules above stay the source of truth).
+  const pickerLimits = (values, { now = new Date(), original = null } = {}) => {
+    const startIsPast = original && parseLocal(original.when) < floorToMinute(now);
+    return {
+      startMin: startIsPast ? '' : toLocalInput(floorToMinute(now)),
+      endMin: values.when || '',
+      rsvpMax: values.when ? values.when.slice(0, 10) : '',
+    };
+  };
+
+  return { STATUS, parseLocal, partyEnd, getEventStatus, isClosed, splitByStatus, tally, summarizeParties, validateParty, pickerLimits };
+})();
+/* ===================== END PARTY RULES ===================== */
+
+/* =====================================================================
+   ADMIN · PLAN · DISCOUNT RULES — pure business logic (no DOM, no Firebase).
+   Kept apart from PartyRules and from all host screens. Migration: move to `src/rules/adminRules.js` and export.
+   ===================================================================== */
+const AdminRules = (() => {
+  // Roles are DERIVED from the verified sign-in email — never read from a stored field a user could edit.
+  //   SUPER_ADMIN = SUPER_ADMIN_EMAIL (config; mirrored in firestore.rules) · ADMIN = email listed in Firestore admins/{email} · USER = anyone else.
+  const ROLES = Object.freeze({ SUPER_ADMIN: 'SUPER_ADMIN', ADMIN: 'ADMIN', USER: 'USER', GUEST: 'GUEST' });
+  const norm = (e) => String(e || '').trim().toLowerCase();
+  const getRole = (email, adminEmails = []) => {
+    const e = norm(email);
+    if (!e) return ROLES.GUEST;
+    if (e === norm(SUPER_ADMIN_EMAIL)) return ROLES.SUPER_ADMIN;
+    return adminEmails.map(norm).includes(e) ? ROLES.ADMIN : ROLES.USER;
+  };
+  const isSuperAdmin = (email) => getRole(email) === ROLES.SUPER_ADMIN;
+  const isAdmin = (email, adminEmails = []) => { const r = getRole(email, adminEmails); return r === ROLES.SUPER_ADMIN || r === ROLES.ADMIN; };
+
+  // One table decides who may do what (UI and, later, a backend can share it). Firestore rules enforce the same split.
+  const PERMISSIONS = Object.freeze({
+    useDuringMaintenance: [ROLES.SUPER_ADMIN, ROLES.ADMIN],
+    configurePlatform:    [ROLES.SUPER_ADMIN, ROLES.ADMIN],      // maintenance switch, plans & limits, discounts, assign client plans
+    manageAdmins:         [ROLES.SUPER_ADMIN],                   // add / remove other admins
+    viewGuestEmails:      [ROLES.SUPER_ADMIN],                   // Users tab: see invitee email addresses (others see counts only)
+  });
+  const can = (role, action) => (PERMISSIONS[action] || []).includes(role);
+
+  // Maintenance: everyone without the permission is blocked while the flag is on.
+  const canUseApp = (config, email, adminEmails = []) => !(config && config.maintenance) || can(getRole(email, adminEmails), 'useDuringMaintenance');
+
+  // Validates an email being added as an admin. Returns { email, error }.
+  const validateAdminEmail = (raw, existing = []) => {
+    const email = norm(raw);
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { email, error: 'Enter a valid email address.' };
+    if (email === norm(SUPER_ADMIN_EMAIL)) return { email, error: 'That is the Super Admin — already has full access.' };
+    if (existing.map(norm).includes(email)) return { email, error: 'That email is already an admin.' };
+    return { email, error: '' };
+  };
+
+  // Platform aggregation: clients per plan. Admins are exempt from plans, so they are not counted.
+  const planBreakdown = (users, plans, adminEmails = []) => {
+    const def = (plans.find(p => p.isDefault) || plans.find(p => p.id === 'free') || {}).id || 'free';
+    const counts = {};
+    users.filter(u => !isAdmin(u.email, adminEmails)).forEach(u => { const id = u.planId || def; counts[id] = (counts[id] || 0) + 1; });
+    return Object.entries(counts).map(([id, count]) => ({ id, name: (plans.find(p => p.id === id) || {}).name || id, count })).sort((a, b) => b.count - a.count);
+  };
+  // Active subscriptions per plan. subs: [{uid, planId, status, startDate}] (all hosts). Only each host's latest active one counts.
+  const subscriptionBreakdown = (subs, plans) => {
+    const latest = {};
+    subs.filter(s => s.status === 'active').forEach(s => { const cur = latest[s.uid]; if (!cur || (s.startDate?.seconds || 0) >= (cur.startDate?.seconds || 0)) latest[s.uid] = s; });
+    const counts = {};
+    Object.values(latest).forEach(s => { counts[s.planId] = (counts[s.planId] || 0) + 1; });
+    return Object.entries(counts).map(([id, count]) => ({ id, name: (plans.find(p => p.id === id) || {}).name || id, count })).sort((a, b) => b.count - a.count);
+  };
+  const getUserRole = getRole;      // spec alias
+  return { ROLES, getRole, getUserRole, isSuperAdmin, isAdmin, can, canUseApp, validateAdminEmail, planBreakdown, subscriptionBreakdown };
+})();
+
+const PlanRules = (() => {
+  // One row per limit. `nullable` = blank means "unlimited". Adding a new limit later = add one row here.
+  const LIMIT_FIELDS = [
+    { key: 'maxParties',          label: 'Max total parties (lifetime)',  hint: 'Every party a host ever creates counts — closed ones too', min: 1, max: 1000,  nullable: true,  def: 10 },
+    { key: 'maxEmailsPerParty',   label: 'Max email invitations per party', hint: 'New addresses a host can invite to one party within each cooling period', min: 1, max: 10000, nullable: true,  def: 10 },
+    { key: 'maxPeoplePerRsvp',    label: 'Max people per RSVP',           hint: '“How many attending” cap (hard limit 20)',      min: 1, max: 20,    nullable: false, def: 20 },
+    { key: 'cooldownHours',       label: 'Cooling period (hours)',        hint: 'Rolling window for invitations, and the wait between “Remind pending” sends', min: 1, max: 168, nullable: false, def: 24 },
+    { key: 'maxPhotoKB',          label: 'Max cover photo size (KB)',     hint: 'Stored with the party (max 800)',               min: 50, max: 800,  nullable: false, def: 400 },
+  ];
+  const DEFAULT_LIMITS = Object.freeze(Object.fromEntries(LIMIT_FIELDS.map(f => [f.key, f.def])));
+
+  // The three standard plans (used to seed the plans collection; admins can edit them or add more). null = unlimited.
+  const STANDARD_PLANS = Object.freeze([
+    { id: 'starter',  name: 'Starter',  price: 0,     popular: false, active: true, isDefault: true,  canDeleteParties: false, canExportGuests: false, limits: { maxParties: 2,    maxEmailsPerParty: 10,   maxPeoplePerRsvp: 10, cooldownHours: 24, maxPhotoKB: 400 } },
+    { id: 'pro_host', name: 'Pro Host', price: 9.99,  popular: true,  active: true, isDefault: false, canDeleteParties: false, canExportGuests: false, limits: { maxParties: 10,   maxEmailsPerParty: 100,  maxPeoplePerRsvp: 20, cooldownHours: 24, maxPhotoKB: 600 } },
+    { id: 'vip',      name: 'VIP',      price: 24.99, popular: false, active: true, isDefault: false, canDeleteParties: true,  canExportGuests: true,  limits: { maxParties: null, maxEmailsPerParty: null, maxPeoplePerRsvp: 20, cooldownHours: 24, maxPhotoKB: 800 } },
+  ]);
+
+  const priceOf = (plan) => Number((plan && plan.price) || 0);                       // plans without a price (older docs) are free
+  const isFree = (plan) => priceOf(plan) === 0;
+  // Validates the non-limit plan fields. Returns { errors, price }.
+  const validatePlanMeta = ({ name, price }) => {
+    const errors = {}, n = Number(price);
+    if (!String(name || '').trim()) errors.name = 'Enter a plan name.';
+    if (price === '' || price == null || !isFinite(n) || n < 0 || n > 10000) errors.price = 'Price: 0 – 10,000.';
+    else if (Math.abs(n * 100 - Math.round(n * 100)) > 1e-6) errors.price = 'At most 2 decimal places.';
+    return { errors, valid: !Object.keys(errors).length, price: Math.round(n * 100) / 100 };
+  };
+
+  // ---- Subscriptions ----
+  // The host's current plan id: their latest ACTIVE subscription, else a plan assigned directly on their profile (older assignments).
+  const activeSubscription = (subs) => subs.filter(s => s.status === 'active').sort((a, b) => (b.startDate?.seconds || 0) - (a.startDate?.seconds || 0))[0] || null;
+  const currentPlanId = (subs, legacyPlanId) => (activeSubscription(subs) || {}).planId || legacyPlanId || null;
+
+  // Upgrade-only for hosts (rank = price). Admins may override anything (the screen asks them to confirm downgrades).
+  const canChangePlan = (current, target, { isAdmin = false } = {}) => {
+    const from = priceOf(current), to = priceOf(target);
+    const kind = !current || to > from ? 'upgrade' : to === from ? 'same' : 'downgrade';
+    if (kind === 'same') return { ok: false, kind, message: 'That is already the current plan.' };
+    if (kind === 'downgrade' && !isAdmin) return { ok: false, kind, message: 'Plans can only be upgraded. To end a paid plan, cancel it — you drop to Starter when it ends.' };
+    return { ok: true, kind };
+  };
+
+  // plans: [{id, name, isDefault, limits}], planId: the user's plan (may be missing) -> { planId, planName, limits }
+  const resolveLimits = (plans, planId) => {
+    const chosen = plans.find(p => p.id === planId) || plans.find(p => p.isDefault) || plans.find(p => p.id === 'starter') || plans.find(p => p.id === 'free') || null;
+    return { planId: chosen ? chosen.id : (planId || 'free'), planName: chosen ? chosen.name : 'Free', canDeleteParties: !!(chosen && chosen.canDeleteParties === true), canExportGuests: !!(chosen && chosen.canExportGuests === true), limits: { ...DEFAULT_LIMITS, ...((chosen && chosen.limits) || {}) } };
+  };
+
+  // raw: { key: string|number }. Returns { limits, errors:{key:msg}, valid }.
+  const validateLimits = (raw) => {
+    const limits = {}, errors = {};
+    LIMIT_FIELDS.forEach(f => {
+      const v = raw[f.key];
+      if (v === '' || v === null || v === undefined) { if (f.nullable) limits[f.key] = null; else errors[f.key] = 'Required.'; return; }
+      const n = Number(v);
+      if (!Number.isInteger(n)) errors[f.key] = 'Use a whole number.';
+      else if (n < f.min || n > f.max) errors[f.key] = `Enter ${f.min}–${f.max}${f.nullable ? ' (or leave blank for unlimited)' : ''}.`;
+      else limits[f.key] = n;
+    });
+    return { limits, errors, valid: !Object.keys(errors).length };
+  };
+
+  // Admins (Super Admin + Admin) sit above every plan: no limits apply to them.
+  const UNLIMITED = Object.freeze({ maxParties: null, maxEmailsPerParty: null, maxPeoplePerRsvp: 20, cooldownHours: 24, maxPhotoKB: 800 });
+  const applyAdminExemption = (resolved, isAdmin) => isAdmin ? { planId: 'admin', planName: 'Admin (unlimited)', canDeleteParties: true, canExportGuests: true, limits: { ...UNLIMITED } } : resolved;
+
+  // VIP-only features. plan = the host's resolved plan ({ canDeleteParties, canExportGuests } — switches set per plan in Admin).
+  // Admins are always allowed. Deleting also stops "delete old parties to free up the limit".
+  const canUserDeleteParty = (plan, { isAdmin = false } = {}) => isAdmin || (plan && plan.canDeleteParties === true)
+    ? { ok: true } : { ok: false, message: 'Deleting parties is a VIP feature. Upgrade to VIP to unlock deletion.' };
+  const canUserExportGuestList = (plan, { isAdmin = false } = {}) => isAdmin || (plan && plan.canExportGuests === true)
+    ? { ok: true } : { ok: false, message: 'Exporting guest lists is exclusive to the VIP plan. Upgrade to unlock!' };
+
+  // Lifetime party allowance: EVERY party a host has created counts (Closed ones too). `createdCount` = parties created so far.
+  // plan = the host's resolved plan ({ planName, limits }); no limit (VIP) or an admin = unlimited.
+  const canUserCreateParty = (plan, createdCount, { isAdmin = false } = {}) => {
+    const max = plan && plan.limits ? plan.limits.maxParties : null;
+    if (isAdmin || max == null || createdCount < max) return { ok: true };
+    return { ok: false, message: `You have reached the maximum total party limit (${max} total part${max === 1 ? 'y' : 'ies'}) allowed on your ${plan.planName} plan. Please upgrade your plan to unlock more party slots!` };
+  };
+  // ---- Email invitations: N new addresses per party in any rolling cooling period (default 24 h) ----
+  // entries = the party's permanent invitation log: [{ at: epoch ms }]. Deleting a guest never removes a log entry.
+  const clockText = (ms, now = Date.now()) => {
+    const d = new Date(ms), tm = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+    return d.toDateString() === new Date(now).toDateString() ? tm : d.toLocaleDateString([], { weekday: 'short' }) + ' ' + tm;
+  };
+  const invitationWindow = (entries, limits, now = Date.now()) => {
+    const max = limits.maxEmailsPerParty, hours = limits.cooldownHours || 0, win = hours * 3600e3;
+    const recent = win ? entries.map(e => e.at).filter(at => at > now - win).sort((a, b) => a - b) : [];
+    const used = recent.length;
+    return { used, max, hours, remaining: max == null ? Infinity : Math.max(0, max - used), resetAt: max != null && used >= max ? recent[used - max] + win : null };
+  };
+  // One short line for the invite box.
+  const inviteStatusLine = (w, now = Date.now()) => w.max == null ? 'Unlimited email invitations on your plan.'
+    : `Invitations in the last ${w.hours} h: ${w.used} of ${w.max}` + (w.resetAt ? ` · more unlock at ${clockText(w.resetAt, now)}` : '');
+  // wanted = how many new addresses the host is adding now. allowed = how many can go out right now.
+  const inviteDecision = (w, wanted, now = Date.now()) => {
+    if (wanted <= w.remaining) return { ok: true, allowed: wanted };
+    const allowed = w.remaining;
+    return { ok: false, allowed, message: allowed
+      ? `Invited ${allowed} of ${wanted}. Limit reached (${w.used + allowed} of ${w.max}) — the rest unlock at ${clockText(w.resetAt || now, now)}, or upgrade your plan.`
+      : `Limit reached (${w.used} of ${w.max}). More invitations unlock at ${clockText(w.resetAt || now, now)}, or upgrade your plan.` };
+  };
+  const reminderWait = (limits, lastMs, nowMs) => {
+    const hrs = limits.cooldownHours;
+    if (!hrs || !lastMs) return { ok: true };
+    const waitMs = lastMs + hrs * 3600e3 - nowMs;
+    if (waitMs <= 0) return { ok: true };
+    const left = Math.ceil(waitMs / 360e3) / 10;
+    return { ok: false, hoursLeft: left, message: `Reminders were sent recently. You can send again in about ${left} hour${left === 1 ? '' : 's'}.` };
+  };
+  const dataUrlBytes = (s) => { const i = String(s).indexOf(','); return i < 0 ? 0 : Math.floor((s.length - i - 1) * 3 / 4); };
+  const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+  return { LIMIT_FIELDS, DEFAULT_LIMITS, STANDARD_PLANS, UNLIMITED, applyAdminExemption, resolveLimits, canUserDeleteParty, canUserExportGuestList, canUserCreateParty, priceOf, isFree, validatePlanMeta, activeSubscription, currentPlanId, canChangePlan, invitationWindow, inviteStatusLine, inviteDecision, canAddEmailRecipient: inviteDecision, clockText, validateLimits, reminderWait, dataUrlBytes, dayKey };
+})();
+
+const DiscountRules = (() => {
+  const normalizeCode = (s) => String(s || '').trim().toUpperCase();
+  const TYPES = { percent: 'Percentage %', fixed: 'Fixed amount $' };
+
+  // raw: { code, type, value, expiresAt, usageLimit } (strings from the form). ctx: { existingCodes, isNew, today:'YYYY-MM-DD' }
+  const validateDiscount = (raw, { existingCodes = [], isNew = true, today = '' } = {}) => {
+    const errors = {}, code = normalizeCode(raw.code);
+    if (!/^[A-Z0-9_-]{3,20}$/.test(code)) errors.code = 'Use 3–20 letters, numbers, - or _ (e.g. SUMMER20).';
+    else if (isNew && existingCodes.map(normalizeCode).includes(code)) errors.code = 'That code already exists.';
+    if (!TYPES[raw.type]) errors.type = 'Choose a type.';
+    const v = Number(raw.value);
+    if (raw.value === '' || !isFinite(v)) errors.value = 'Enter a value.';
+    else if (Math.abs(v * 100 - Math.round(v * 100)) > 1e-6) errors.value = 'At most 2 decimal places.';
+    else if (raw.type === 'percent' && !(v > 0 && v <= 100)) errors.value = 'Percentage must be above 0 and at most 100.';
+    else if (raw.type === 'fixed' && !(v > 0 && v <= 10000)) errors.value = 'Amount must be above 0 and at most 10,000.';
+    if (raw.expiresAt) {
+      if (isNaN(new Date(raw.expiresAt + 'T00:00'))) errors.expiresAt = 'Invalid date.';
+      else if (today && raw.expiresAt < today) errors.expiresAt = 'Expiry can’t be in the past.';
+    }
+    let limit = null;
+    if (raw.usageLimit !== '' && raw.usageLimit != null) {
+      limit = Number(raw.usageLimit);
+      if (!Number.isInteger(limit) || limit < 1 || limit > 1e6) errors.usageLimit = 'Whole number from 1 (or leave blank for unlimited).';
+    }
+    return { errors, valid: !Object.keys(errors).length, clean: { code, type: raw.type, value: Math.round(v * 100) / 100, expiresAt: raw.expiresAt || '', usageLimit: limit } };
+  };
+  // Active / Inactive / Expired / Exhausted — what the table shows.
+  const discountState = (d, today) => {
+    if (!d.active) return 'Inactive';
+    if (d.expiresAt && d.expiresAt < today) return 'Expired';
+    if (d.usageLimit != null && (d.used || 0) >= d.usageLimit) return 'Exhausted';
+    return 'Active';
+  };
+  // Price after a discount code (never below 0). The code must already be Active (see discountState).
+  const applyDiscount = (price, d) => {
+    const p = Number(price) || 0;
+    const out = d.type === 'percent' ? p * (1 - Number(d.value) / 100) : p - Number(d.value);
+    return Math.max(0, Math.round(out * 100) / 100);
+  };
+  const formatValue = (d) => d.type === 'percent' ? `${d.value}%` : `$${Number(d.value).toFixed(2)}`;
+  return { TYPES, normalizeCode, validateDiscount, discountState, applyDiscount, formatValue };
+})();
+/* ===================== END ADMIN · PLAN · DISCOUNT RULES ===================== */
+
+/* ====================================================================================================
+   LAYER 1d · UserMetricsRules — per-user analytics for the admin Users tab. Pure functions: no Firebase,
+   no DOM. React: call these inside useMemo; later swap the inputs for Cloud Function aggregates.
+   ==================================================================================================== */
+const UserMetricsRules = (() => {
+  // Real parties only (migration leaves stubs { ownerUid, movedTo } without a name).
+  const realParties = (parties) => parties.filter(p => p && p.name && !p.movedTo);
+  const activeParties = (parties) => realParties(parties).filter(p => !PartyRules.isClosed(p));
+  const partiesByUser = (allParties) => { const m = {}; realParties(allParties).forEach(p => (m[p.uid] = m[p.uid] || []).push(p)); return m; };
+  // Emails actually sent for a party (tracked from v21 on). null = not tracked for this older party.
+  const emailsSent = (p) => typeof p.emailsSent === 'number' ? p.emailsSent : null;
+
+  // One table row. plan = resolved { planId, planName, limits } (admins already exempt).
+  const userRow = (user, parties, plan) => {
+    const mine = realParties(parties), tracked = mine.filter(p => emailsSent(p) != null);
+    return {
+      uid: user.id, name: user.displayName || '', email: user.email || '', planName: plan.planName,
+      activeParties: activeParties(mine).length, totalParties: mine.length,
+      invitationsSent: tracked.reduce((n, p) => n + emailsSent(p), 0), hasUntracked: tracked.length < mine.length,
+      lastLoginAt: user.lastLoginAt || null,
+    };
+  };
+  // ok | near (>=80%) | full | unlimited
+  const limitState = (count, max) => max == null ? 'unlimited' : count >= max ? 'full' : count >= Math.ceil(max * 0.8) ? 'near' : 'ok';
+  // One party under a user. guests = that party's guest docs, invites = its invitation log (either null if not loaded yet).
+  const partyBreakdown = (party, guests, limits, invites = null) => {
+    const win = invites ? PlanRules.invitationWindow(invites, limits) : null;
+    return { id: party.id, title: `${party.name}'s Birthday`, when: party.when, endWhen: party.endWhen, status: PartyRules.getEventStatus(party),
+      invitees: guests ? guests.length : null, window: win, state: win ? limitState(win.used, win.max) : 'ok', emailsSent: emailsSent(party) };
+  };
+  const sortRows = (rows, key, dir = 'desc') => rows.slice().sort((a, b) => { const x = a[key], y = b[key]; const c = typeof x === 'string' ? x.localeCompare(y) : (x - y); return dir === 'asc' ? c : -c; });
+  const filterRows = (rows, { text = '', onlyActive = false } = {}) => { const q = text.trim().toLowerCase();
+    return rows.filter(r => (!q || r.name.toLowerCase().includes(q) || r.email.toLowerCase().includes(q) || r.uid.toLowerCase().includes(q)) && (!onlyActive || r.activeParties > 0)); };
+  return { realParties, activeParties, partiesByUser, emailsSent, userRow, limitState, partyBreakdown, sortRows, filterRows };
+})();
+/* ===================== END USER METRICS RULES ===================== */
+
+const configured = !FIREBASE_CONFIG.apiKey.startsWith('YOUR_');
+if (!configured) {
+  app.innerHTML = `<div class="max-w-lg mx-auto bg-white rounded-2xl shadow p-8"><div class="text-4xl mb-2">🛠️</div>
+    <h1 class="text-xl font-bold">Almost there</h1>
+    <p class="text-slate-600 mt-2">Paste your Firebase config (and EmailJS keys) into the <code>FIREBASE_CONFIG</code> / <code>EMAILJS</code> block near the top of <code>index.html</code>, then redeploy.</p></div>`;
+} else {
+  const fb = initializeApp(FIREBASE_CONFIG);
+  const auth = isGuestPage ? null : getAuth(fb);
+  let db;                                          // hosts get an on-device cache (repeat visits paint from it first)
+  try { db = isGuestPage ? getFirestore(fb) : initializeFirestore(fb, { localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }) }); }
+  catch { db = getFirestore(fb); }
+  const emailReady = !EMAILJS.publicKey.startsWith('YOUR_');
+  // The email library is only fetched the first time something is actually sent.
+  let mailerP = null;
+  const mailer = () => mailerP || (mailerP = new Promise((res, rej) => {
+    const s = document.createElement('script'); s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+    s.onload = () => { window.emailjs.init({ publicKey: EMAILJS.publicKey }); res(window.emailjs); };
+    s.onerror = () => { mailerP = null; rej(new Error('Email library failed to load')); };
+    document.head.appendChild(s);
+  }));
+
+  /* ---------- DATA PATHS — the only place that knows the database layout ----------
+     users/{uid}                          one doc per signed-in host (profile)
+       └ parties/{partyId}                that host's parties   (ownership = the path)
+           └ guests/{guestId}             invitees + replies
+     Legacy (v16 and older): top-level parties/{partyId}. Migrated parties leave a small stub there so old links still work. */
+  const P = {
+    user:    (uid)               => doc(db, 'users', uid),
+    parties: (uid)               => collection(db, 'users', uid, 'parties'),
+    partyLog:(uid)               => collection(db, 'users', uid, 'partyLog'),                    // append-only: one numbered entry per party ever created (the lifetime limit counts these)
+    partyLogEntry: (uid, n)      => doc(db, 'users', uid, 'partyLog', String(n)),
+    party:   (uid, pid)          => doc(db, 'users', uid, 'parties', pid),
+    guests:  (uid, pid)          => collection(db, 'users', uid, 'parties', pid, 'guests'),
+    guest:   (uid, pid, gid)     => doc(db, 'users', uid, 'parties', pid, 'guests', gid),
+    invites: (uid, pid)          => collection(db, 'users', uid, 'parties', pid, 'invites'),      // append-only invitation log (the rolling email limit counts these)
+    invite:  (uid, pid, n)       => doc(db, 'users', uid, 'parties', pid, 'invites', String(n)),
+    users:   ()                  => collection(db, 'users'),
+    subs:    (uid)               => collection(db, 'users', uid, 'subscriptions'),
+    sub:     (uid, sid)          => doc(db, 'users', uid, 'subscriptions', sid),
+    // Platform level
+    config:  ()                  => doc(db, 'config', 'app'),                     // { maintenance, message }
+    admin:   (email)             => doc(db, 'admins', email),                     // presence = admin
+    plans:   ()                  => collection(db, 'plans'),
+    plan:    (id)                => doc(db, 'plans', id),
+    discounts: ()                => collection(db, 'discounts'),
+    discount:  (code)            => doc(db, 'discounts', code),
+  };
+
+  /* =====================================================================================================
+     LAYER 3 — DATA (Repo). The ONLY place that calls Firebase (Firestore + Auth). Screens call Repo.* and get plain objects.
+     React migration: keep this file as-is (or swap the backend) and wrap calls in hooks, e.g. useParties() -> Repo.parties.list().
+     ===================================================================================================== */
+  const snapList = (s) => s.docs.map(d => ({ id: d.id, ...d.data() }));
+  const byCreated = (a, b) => (a.createdAt?.seconds || 0) - (b.createdAt?.seconds || 0);
+  const newestFirst = (a, b) => byCreated(b, a);
+  const legacyGuests = (pid) => collection(db, 'parties', pid, 'guests');
+
+  const Repo = {
+    auth: {
+      onChange:         (cb) => onAuthStateChanged(auth, cb),
+      signInWithGoogle: () => signInWithPopup(auth, new GoogleAuthProvider()),
+      signOut:          () => signOut(auth),
+    },
+
+    // Platform config: { maintenance, message }
+    config: {
+      watch: (onData, onError) => onSnapshot(P.config(), (s) => onData({ maintenance: false, message: '', ...(s.exists() ? s.data() : {}) }), onError),
+      get:   async () => { const s = await getDoc(P.config()); return s.exists() ? s.data() : {}; },
+      save:  (patch, byEmail) => setDoc(P.config(), { ...patch, updatedAt: serverTimestamp(), updatedBy: byEmail }, { merge: true }),
+    },
+
+    // The signed-in host's own profile (users/{uid}). Never writes planId.
+    profile: {
+      save: async (u) => {                                  // best effort: the app works even if this fails
+        try {
+          const ref = P.user(u.uid), snap = await getDoc(ref);
+          const base = { displayName: u.displayName || '', email: u.email || '', photoURL: u.photoURL || '', lastLoginAt: serverTimestamp() };
+          await setDoc(ref, snap.exists() ? base : { ...base, createdAt: serverTimestamp() }, { merge: true });
+        } catch (e) { console.warn('profile not saved', e); }
+      },
+      planId: async (uid) => { const s = await getDoc(P.user(uid)); return s.exists() ? (s.data().planId || null) : null; },
+    },
+
+    // Secondary admins: admins/{email}. (The Super Admin is configuration, not a record.)
+    admins: {
+      has:    async (email) => (await getDoc(P.admin(email))).exists(),
+      list:   async () => snapList(await getDocs(collection(db, 'admins'))),
+      add:    (email, byEmail) => setDoc(P.admin(email), { email, addedBy: byEmail, addedAt: serverTimestamp() }),
+      remove: (email) => deleteDoc(P.admin(email)),
+    },
+
+    plans: {
+      list:       async () => snapList(await getDocs(P.plans())),
+      seed:       async (plans) => { const b = writeBatch(db); plans.forEach(p => { const { id, ...data } = p; b.set(P.plan(id), { ...data, updatedAt: serverTimestamp() }); }); await b.commit(); },
+      create:     (id, data) => setDoc(P.plan(id), { ...data, updatedAt: serverTimestamp() }),
+      update:     (id, data) => updateDoc(P.plan(id), { ...data, updatedAt: serverTimestamp() }),
+      remove:     (id) => deleteDoc(P.plan(id)),
+      setDefault: async (allIds, id) => { const b = writeBatch(db); allIds.forEach(x => b.update(P.plan(x), { isDefault: x === id })); await b.commit(); },
+    },
+
+    users: {
+      list:    async () => snapList(await getDocs(P.users())),
+      count:   async () => (await getCountFromServer(P.users())).data().count,
+    },
+
+    // users/{uid}/subscriptions/{id}: { planId, status: active|cancelled|expired, startDate, appliedDiscountCode }
+    subscriptions: {
+      list:    async (uid) => snapList(await getDocs(P.subs(uid))),
+      listAll: async () => (await getDocs(collectionGroup(db, 'subscriptions'))).docs.map(d => ({ id: d.id, uid: d.ref.path.split('/')[1], ...d.data() })),
+      // A host's one-and-only self-service signup (free plans only; the database rules allow exactly this document id).
+      startFree: (uid, planId, code = '') => setDoc(P.sub(uid, 'free-signup'), { planId, status: 'active', startDate: serverTimestamp(), appliedDiscountCode: code || '', source: 'self' }),
+      // Admin: move a client to a plan. Cancels their active subscriptions, creates a new active one, mirrors planId on the profile.
+      assign: async (uid, planId, byEmail) => {
+        const old = snapList(await getDocs(P.subs(uid))).filter(s => s.status === 'active');
+        const ref = doc(P.subs(uid)), b = writeBatch(db);
+        old.forEach(s => b.update(P.sub(uid, s.id), { status: 'cancelled', endDate: serverTimestamp() }));
+        b.set(ref, { planId, status: 'active', startDate: serverTimestamp(), appliedDiscountCode: '', source: 'admin', assignedBy: byEmail });
+        b.set(P.user(uid), { planId, currentSubscriptionId: ref.id }, { merge: true });
+        await b.commit(); return ref.id;
+      },
+    },
+
+    parties: {
+      list:     async (uid) => snapList(await getDocs(P.parties(uid))).sort(newestFirst),
+      // Each party is written together with its numbered, create-only log entry. The database rules accept entry n only while
+      // n is below the plan's lifetime limit, and entries can never be deleted — so deleting parties never frees a slot.
+      create:   async (uid, data) => {
+        for (let attempt = 0; ; attempt++) {
+          const seq = (await getCountFromServer(P.partyLog(uid))).data().count, ref = doc(P.parties(uid)), b = writeBatch(db);
+          b.set(P.partyLogEntry(uid, seq), { partyId: ref.id, createdAt: serverTimestamp() });
+          b.set(ref, { ...data, logSeq: seq, createdAt: serverTimestamp() });
+          try { await b.commit(); return ref.id; }
+          catch (e) { if (attempt >= 1) { e.limit = e.code === 'permission-denied'; throw e; } }      // one retry covers two tabs creating at once
+        }
+      },
+      update:   (uid, pid, data) => updateDoc(P.party(uid, pid), data),
+      remove:   async (uid, pid, guestIds) => { const b = writeBatch(db); guestIds.forEach(g => b.delete(P.guest(uid, pid, g))); b.delete(P.party(uid, pid)); await b.commit(); },
+      countAll: async () => (await getCountFromServer(collectionGroup(db, 'parties'))).data().count,
+      listAll:  async () => (await getDocs(collectionGroup(db, 'parties'))).docs.map(d => ({ id: d.id, uid: d.ref.path.split('/')[1], ...d.data() })),   // admins: every host's parties
+      addSent:  (uid, pid, n) => updateDoc(P.party(uid, pid), { emailsSent: increment(n) }),
+    },
+
+    guests: {
+      watch:    (uid, pid, onData, onError) => onSnapshot(P.guests(uid, pid), (s) => onData(snapList(s).sort(byCreated)), onError),   // returns unsubscribe
+      remove:   (uid, pid, gid) => deleteDoc(P.guest(uid, pid, gid)),
+      list:     async (uid, pid) => snapList(await getDocs(P.guests(uid, pid))),            // admins: one party's guest list
+      markSent: (uid, pid, gid) => updateDoc(P.guest(uid, pid, gid), { invitedAt: serverTimestamp() }),
+      resetAll: async (uid, pid, guestIds) => { const b = writeBatch(db); guestIds.forEach(g => b.update(P.guest(uid, pid, g), { status: 'pending', name: '', count: 0 })); await b.commit(); },
+    },
+
+    // Per-host daily counters (emails sent today)
+    // Invitations: each one is a numbered, create-only log entry written together with its guest. The database rules accept
+    // entry n only when entry n-max is older than the cooling period, so the limit holds even if the app is bypassed.
+    invitations: {
+      list: async (uid, pid) => snapList(await getDocs(P.invites(uid, pid))).map(x => ({ seq: Number(x.id), email: x.email, at: x.createdAt && x.createdAt.toMillis ? x.createdAt.toMillis() : Date.now() })).sort((a, b) => a.seq - b.seq),
+      add: async (uid, pid, email) => {
+        for (let attempt = 0; ; attempt++) {
+          const seq = (await getCountFromServer(P.invites(uid, pid))).data().count, gref = doc(P.guests(uid, pid)), b = writeBatch(db);
+          b.set(P.invite(uid, pid, seq), { email, guestId: gref.id, createdAt: serverTimestamp() });
+          b.set(gref, { email, status: 'pending', name: '', count: 0, inviteSeq: seq, createdAt: serverTimestamp() });
+          try { await b.commit(); return gref.id; }
+          catch (e) { if (attempt >= 1) { e.limit = e.code === 'permission-denied'; throw e; } }      // one retry covers two tabs adding at once
+        }
+      },
+    },
+
+    discounts: {
+      list:   async () => snapList(await getDocs(P.discounts())).sort((a, b) => a.code.localeCompare(b.code)),
+      create: (code, data) => setDoc(P.discount(code), { code, ...data, used: 0, active: true, createdAt: serverTimestamp() }),
+      update: (code, data) => updateDoc(P.discount(code), { ...data, updatedAt: serverTimestamp() }),
+      remove: (code) => deleteDoc(P.discount(code)),
+      lookup: async (code) => { const s = await getDoc(P.discount(code)); return s.exists() ? { id: s.id, ...s.data() } : null; },   // exact code only — hosts cannot list codes
+    },
+
+    // v16 -> nested migration. Same ids; a stub is left at the old path so earlier links redirect.
+    legacy: {
+      list: async (uid) => snapList(await getDocs(query(collection(db, 'parties'), where('ownerUid', '==', uid)))).filter(x => !x.movedTo),
+      migrate: async (uid, legacyParties) => {
+        const commit = async (ops) => { for (let i = 0; i < ops.length; i += 400) { const b = writeBatch(db); ops.slice(i, i + 400).forEach(fn => fn(b)); await b.commit(); } };
+        for (const lp of legacyParties) {
+          const gs = await getDocs(legacyGuests(lp.id));
+          const { id, ownerUid, ...pdata } = lp;
+          await commit([b => b.set(P.party(uid, lp.id), pdata), ...gs.docs.map(g => b => b.set(P.guest(uid, lp.id, g.id), g.data()))]);
+          await commit([...gs.docs.map(g => b => b.delete(doc(db, 'parties', lp.id, 'guests', g.id))), b => b.set(doc(db, 'parties', lp.id), { ownerUid: uid, movedTo: uid })]);
+        }
+      },
+    },
+
+    // What a guest does with their personal link (no sign-in).
+    invitation: {
+      load: async ({ owner, pid, token }) => {
+        let ps = await getDoc(owner ? P.party(owner, pid) : doc(db, 'parties', pid));
+        if (ps.exists() && !owner && ps.data().movedTo) { owner = ps.data().movedTo; ps = await getDoc(P.party(owner, pid)); }   // old link to a migrated party
+        const gs = await getDoc(owner ? P.guest(owner, pid, token) : doc(db, 'parties', pid, 'guests', token));
+        if (!ps.exists() || !gs.exists()) throw new Error('missing');
+        return { party: ps.data(), guest: gs.data(), owner };
+      },
+      reply: ({ owner, pid, token }, { status, name, count }) =>
+        updateDoc(owner ? P.guest(owner, pid, token) : doc(db, 'parties', pid, 'guests', token), { status, name, count, respondedAt: serverTimestamp() }),
+    },
+  };
+  /* ===================================== END DATA LAYER ===================================== */
+
+  if (params.get('partyId') && params.get('t')) guestView();
+  else organizerApp();
+
+  /* ============================ GUEST VIEW (unchanged) ============================ */
+  async function guestView() {
+    const pid = params.get('partyId'), token = params.get('t');
+    let owner = params.get('o') || '';               // host uid (new links); empty = old v16 link
+    const guestEmail = (params.get('guestEmail') || '').toLowerCase();
+    app.innerHTML = `<p class="text-center text-slate-500 mt-20">Loading your invitation…</p>`;
+    let party, guest;
+    try {
+      ({ party, guest, owner } = await Repo.invitation.load({ owner, pid, token }));
+    } catch {
+      app.innerHTML = `<div class="max-w-md mx-auto bg-white rounded-2xl shadow p-8 text-center"><div class="text-5xl mb-3">🤔</div><h1 class="text-xl font-bold">Invitation not found</h1><p class="text-slate-500 mt-2">Please ask the host to send the link again.</p></div>`;
+      return;
+    }
+    const email = guest.email || guestEmail;
+    let mine = guest.status !== 'pending' ? { status: guest.status, name: guest.name, count: guest.count ?? (guest.status === 'accepted' ? 1 : 0) } : null;
+    let tick;
+    const extrasHtml = () => `
+      <p id="countdown" class="mt-4 font-semibold text-pink-600">${esc(countdownText(party.when))}</p>
+      <div class="grid grid-cols-2 gap-2 mt-3 text-sm">
+        <a href="${esc(googleCalUrl(party))}" target="_blank" rel="noopener" class="py-2 rounded-lg bg-indigo-50 text-indigo-700 text-center font-medium hover:bg-indigo-100">📆 Google Calendar</a>
+        <button id="icsBtn" type="button" class="py-2 rounded-lg bg-indigo-50 text-indigo-700 font-medium hover:bg-indigo-100">⬇️ Apple / Outlook</button>
+      </div>`;
+    const wireExtras = () => {
+      const b = $('#icsBtn'); if (b) b.onclick = () => downloadIcs(party, pid);
+      clearInterval(tick);
+      tick = setInterval(() => { const c = $('#countdown'); if (c) c.textContent = countdownText(party.when); }, 30000);
+    };
+    render();
+
+    function render() {
+      if (mine) return done();
+      app.innerHTML = `
+      <div class="max-w-lg mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
+        <div class="h-3 bg-gradient-to-r from-pink-400 via-amber-300 to-indigo-400"></div>
+        <img src="${esc(party.photo || placeholderImg)}" onerror="this.src='${placeholderImg}'" alt="Birthday photo" class="w-full h-72 object-cover">
+        <div class="p-6 text-center">
+          <p class="text-sm uppercase tracking-widest text-pink-500 font-semibold">You're invited 🎈</p>
+          <h1 class="text-3xl font-extrabold mt-1">${esc(party.name)}'s Birthday</h1>
+          ${turning(party.birth, party.when) ? `<div class="inline-block mt-2 px-5 py-1.5 rounded-full bg-gradient-to-r from-pink-500 to-amber-500 text-white font-extrabold text-xl shadow">🎈 Turning ${turning(party.birth, party.when)}!</div>` : ''}
+          <p class="text-slate-500 mt-2">Born ${esc(fmtBirth(party.birth))}</p>
+          <div class="mt-5 space-y-2 text-left bg-pink-50 rounded-xl p-4 text-sm">
+            <p>📅 <b>${esc(fmtRange(party.when, party.endWhen))}</b></p>
+            <p>📍 <a href="${esc(mapUrl(party.venue))}" target="_blank" rel="noopener" class="text-indigo-600 underline">${esc(party.venue)}</a> <span class="text-slate-400">· tap for map</span></p>
+            ${party.theme ? `<p>👗 Dress code / theme: <b>${esc(party.theme)}</b></p>` : ''}
+            ${party.rsvpBy ? `<p>⏰ Please reply by <b>${esc(fmtDay(party.rsvpBy))}</b>${rsvpPassed(party.rsvpBy) ? ' <span class="text-rose-600">(deadline passed)</span>' : ''}</p>` : ''}
+            ${party.phone ? `<p>📞 Host: <a href="${esc(telHref(party.phone))}" class="text-indigo-600 underline">${esc(party.phone)}</a></p>` : ''}
+            <p class="text-slate-400">Invitation for ${esc(email)}</p>
+          </div>
+          ${party.note ? `<div class="mt-3 text-left bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm whitespace-pre-line">💌 ${esc(party.note)}</div>` : ''}
+          ${extrasHtml()}
+          <div class="grid grid-cols-2 gap-3 mt-6">
+            <button id="decline" class="py-3 rounded-xl border-2 border-slate-300 font-semibold hover:bg-slate-50">Cancel</button>
+            <button id="accept" class="py-3 rounded-xl bg-emerald-500 text-white font-semibold hover:bg-emerald-600 shadow">Accept</button>
+          </div>
+        </div>
+      </div>`;
+      wireExtras();
+      const cap = Math.max(1, Math.min(20, Number(party.maxPeople) || 20));        // host's plan limit, copied onto the party when saved
+      $('#accept').onclick = () => { $('#guestCountInput').max = cap; $('#nameModal').classList.remove('hidden'); $('#guestNameInput').focus(); };
+      $('#decline').onclick = () => submit('declined', '', 0);
+      $('#nameCancel').onclick = () => $('#nameModal').classList.add('hidden');
+      $('#nameConfirm').onclick = () => {
+        const n = $('#guestNameInput').value.trim();
+        if (!n) { $('#nameErr').classList.remove('hidden'); return; }
+        const cnt = Math.max(1, Math.min(cap, parseInt($('#guestCountInput').value, 10) || 1));
+        $('#nameModal').classList.add('hidden');
+        submit('accepted', n, cnt);
+      };
+    }
+
+    async function submit(status, name, count = 0) {
+      try {
+        await Repo.invitation.reply({ owner, pid, token }, { status, name, count });
+      } catch (e) { console.error(e); return toast('Could not save your reply. Please try again.'); }
+      mine = { status, name, count };
+      notifyHost(status, name, count);
+      done();
+    }
+
+    async function notifyHost(status, name, count) {
+      if (!emailReady || HOST_EMAIL.startsWith('YOUR_')) return;
+      try {
+        const st = status === 'accepted' ? 'ACCEPTED' : 'DECLINED';
+        const who = name || '(declined — no name given)';
+        await (await mailer()).send(EMAILJS.serviceId, EMAILJS.templateId, {
+          to_email: HOST_EMAIL,
+          message_html: `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#222;line-height:1.5"><p><b>${esc(who)}</b> (${esc(email)}) has <b>${st}</b> the invitation to ${esc(party.name)}'s Birthday.</p>${st === 'ACCEPTED' ? `<p>👥 Number of guests: <b>${count}</b></p>` : ''}<p style="color:#666;font-size:13px">Replied at: ${esc(new Date().toLocaleString())}</p></div>`,
+          subject: `RSVP: ${who} ${st}`,
+          guest_count: st === 'ACCEPTED' ? count : 0,
+          message: `${who} (${email}) has ${st} the invitation to ${party.name}'s Birthday.${st === 'ACCEPTED' ? '\nNumber of guests: ' + count : ''}\nReplied at: ${new Date().toLocaleString()}`,
+          party_name: party.name + "'s Birthday",
+          guest_name: who,
+          guest_email: email,
+          status: st,
+          responded_at: new Date().toLocaleString()
+        });
+      } catch (e) { console.warn('Email notification failed (RSVP is still saved):', e); }
+    }
+
+    function done() {
+      const yes = mine.status === 'accepted';
+      app.innerHTML = `
+      <div class="max-w-md mx-auto bg-white rounded-3xl shadow-xl p-8 text-center">
+        <div class="text-6xl mb-3">${yes ? '🎉' : '💌'}</div>
+        <h1 class="text-2xl font-extrabold">${yes ? 'Thank you, your RSVP has been recorded!' : 'Thanks for letting us know'}</h1>
+        <p class="text-slate-500 mt-2">${yes ? `We can't wait to celebrate with you, ${esc(mine.name)}.` : `We'll miss you at ${esc(party.name)}'s party.`}</p>
+        ${yes ? `<p class="mt-2 text-slate-600">👥 ${mine.count} guest${mine.count === 1 ? '' : 's'} in your party</p>
+        <p class="mt-1 text-sm">📍 <a href="${esc(mapUrl(party.venue))}" target="_blank" rel="noopener" class="text-indigo-600 underline">${esc(party.venue)}</a></p>
+        ${extrasHtml()}` : ''}
+        <button id="change" class="mt-6 text-sm text-slate-400 underline">Change my response</button>
+      </div>`;
+      if (yes) wireExtras();
+      $('#change').onclick = () => { mine = null; render(); };
+    }
+  }
+
+
+  /* ====================================================================================================
+     ADMIN SCREENS — separate from every host screen. Talks only to Firestore (via P) and AdminRules /
+     PlanRules / DiscountRules. React: <AdminLayout> with one component per tab.
+     ==================================================================================================== */
+  function makeAdminScreens({ getUser, getRole, getAdminEmails, onPlansChanged, onAdminsChanged }) {
+    const ALL_TABS = [['overview', 'Overview'], ['plans', 'Plans & limits'], ['clients', 'Clients'], ['users', 'Users'], ['discounts', 'Discounts'], ['admins', 'Admins']];
+    const tabsFor = () => ALL_TABS.filter(([id]) => id !== 'admins' || AdminRules.can(getRole(), 'manageAdmins'));   // Admins tab: Super Admin only
+    const tabBar = (tab) => `<div role="tablist" aria-label="Admin sections" class="mb-6 inline-flex flex-wrap rounded-xl bg-slate-100 p-1 text-sm font-medium">${tabsFor().map(([id, l]) =>
+      `<a href="#/admin/${id}" role="tab" aria-selected="${tab === id}" class="rounded-lg px-4 py-1.5 ${tab === id ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'}">${l}</a>`).join('')}</div>`;
+    const loadErr = (e) => `<p class="rounded-lg bg-rose-50 p-3 text-sm text-rose-700">Could not load: ${esc(e.message || e)}. Make sure the latest Firestore rules are published.</p>`;
+    const inp = 'mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm';
+    const today = () => PlanRules.dayKey(new Date());
+    const Stat = (label, value, color) => `<div class="${color} rounded-2xl p-4 text-white shadow"><div class="text-3xl font-extrabold">${value}</div><div class="text-sm opacity-90">${label}</div></div>`;
+    const fmtTs = (ts) => ts && ts.toDate ? ts.toDate().toLocaleDateString() : '—';
+
+    const sections = {
+
+      /* ----- Overview: platform metrics + maintenance switch ----- */
+      async overview(box) {
+        let users, parties, cfg, subRows = [], plansAll = [];
+        try { [users, parties, cfg] = await Promise.all([Repo.users.count(), Repo.parties.countAll(), Repo.config.get()]); }
+        catch (e) { box.innerHTML = loadErr(e); return; }
+        try { [subRows, plansAll] = await Promise.all([Repo.subscriptions.listAll(), Repo.plans.list()]); } catch (e) { console.warn('subscription metrics skipped', e); }
+        const subBd = AdminRules.subscriptionBreakdown(subRows, plansAll);
+        const draw = () => {
+          box.innerHTML = `
+          <div class="grid grid-cols-2 gap-3 sm:max-w-2xl sm:grid-cols-4">${Stat('Users signed up', users, 'bg-indigo-500')}${Stat('Parties created', parties, 'bg-violet-500')}${Stat('Active subscriptions', subBd.reduce((n, b) => n + b.count, 0), 'bg-emerald-500')}${Stat('Maintenance', cfg.maintenance ? 'ON' : 'Off', cfg.maintenance ? 'bg-rose-500' : 'bg-slate-500')}</div>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">${subBd.map(b => `<span class="rounded-full bg-emerald-50 px-3 py-1 text-emerald-700">${esc(b.name)}: <b>${b.count}</b></span>`).join('') || '<span class="text-slate-400">No active subscriptions yet.</span>'}</div>
+          <p class="mt-2 text-xs text-slate-400">Counts cover all hosts. “Parties” may include small placeholders left by migrated v16 parties.</p>
+          <section class="card mt-6">
+            <div class="flex items-start justify-between gap-4">
+              <div><h2 class="text-lg font-semibold">Maintenance mode</h2>
+                <p class="mt-1 text-sm text-slate-500">When on, everyone except admins sees the “Under maintenance” page. Guest invitation links keep working.</p></div>
+              <button id="mmSwitch" role="switch" aria-checked="${!!cfg.maintenance}" aria-label="Maintenance mode" class="relative h-7 w-12 shrink-0 rounded-full transition-colors ${cfg.maintenance ? 'bg-rose-500' : 'bg-slate-300'}">
+                <span class="absolute top-0.5 h-6 w-6 rounded-full bg-white shadow transition-all ${cfg.maintenance ? 'left-[1.4rem]' : 'left-0.5'}"></span></button>
+            </div>
+            <p class="mt-3 text-sm font-medium ${cfg.maintenance ? 'text-rose-600' : 'text-emerald-600'}">${cfg.maintenance ? '● Maintenance is ON' : '● Site is live'}</p>
+            <label for="mmMsg" class="mt-4 block text-sm font-medium">Message shown to users (optional)</label>
+            <textarea id="mmMsg" rows="2" maxlength="300" class="${inp}" placeholder="e.g. We’re upgrading — back at 9 PM CT.">${esc(cfg.message || '')}</textarea>
+            <button id="mmSave" class="btn-soft mt-2">Save message</button>
+          </section>`;
+          const save = async (patch, okMsg) => {
+            try { await Repo.config.save(patch, getUser().email); Object.assign(cfg, patch); toast(okMsg); draw(); }
+            catch (e) { console.error(e); toast('Could not save: ' + e.message, 6000); }
+          };
+          $('#mmSwitch').onclick = () => {
+            const next = !cfg.maintenance;
+            if (next && !confirm('Turn ON maintenance mode? Everyone except admins will see the maintenance page.')) return;
+            save({ maintenance: next, message: $('#mmMsg').value.trim() }, next ? 'Maintenance mode ON' : 'Site is live again');
+          };
+          $('#mmSave').onclick = () => save({ message: $('#mmMsg').value.trim() }, 'Message saved');
+        };
+        draw();
+      },
+
+      /* ----- Plans & limits: the configuration page ----- */
+      async plans(box) {
+        let plans = [];
+        const load = async () => { plans = (await Repo.plans.list()).sort((a, b) => (b.isDefault ? 1 : 0) - (a.isDefault ? 1 : 0) || String(a.name).localeCompare(String(b.name))); };
+        try { await load(); } catch (e) { box.innerHTML = loadErr(e); return; }
+        const field = (p, f) => `<div><label for="lim_${p.id}_${f.key}" class="text-sm font-medium">${esc(f.label)}</label>
+          <input id="lim_${p.id}_${f.key}" data-key="${f.key}" type="number" step="1" min="${f.min}" max="${f.max}" inputmode="numeric" placeholder="${f.nullable ? 'Unlimited' : ''}" value="${(p.limits || {})[f.key] ?? (f.nullable && p.limits && f.key in p.limits ? '' : PlanRules.DEFAULT_LIMITS[f.key])}" class="${inp}">
+          <p class="mt-0.5 text-xs text-slate-400">${esc(f.hint)}${f.nullable ? ' · blank = unlimited' : ''}</p>
+          <p data-err="${f.key}" role="alert" class="hidden text-xs font-medium text-rose-600"></p></div>`;
+        const card = (p) => `<section class="card mt-4" data-plan="${p.id}">
+          <div class="flex flex-wrap items-center gap-3">
+            <input data-name aria-label="Plan name" value="${esc(p.name)}" maxlength="40" class="w-48 rounded-lg border border-slate-300 px-3 py-1.5 font-semibold">
+            <code class="rounded bg-slate-100 px-2 py-0.5 text-xs">${esc(p.id)}</code>
+            ${p.isDefault ? '<span class="rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-medium text-indigo-700">Default plan</span>' : ''}
+            <label class="ml-auto flex items-center gap-2 text-sm"><input data-active type="checkbox" ${p.active !== false ? 'checked' : ''}> Available</label>
+          </div>
+          <div class="mt-3 flex flex-wrap items-end gap-4">
+            <div><label for="pr_${p.id}" class="text-sm font-medium">Price / month ($)</label><input id="pr_${p.id}" data-price type="number" step="0.01" min="0" max="10000" value="${PlanRules.priceOf(p)}" class="${inp} !w-32"><p data-perr role="alert" class="hidden text-xs font-medium text-rose-600"></p></div>
+            <label class="flex items-center gap-2 pb-2 text-sm"><input data-popular type="checkbox" ${p.popular ? 'checked' : ''}> Show “Most Popular”</label>
+            <label class="flex items-center gap-2 pb-2 text-sm"><input data-candelete type="checkbox" ${p.canDeleteParties ? 'checked' : ''}> Can delete parties</label>
+            <label class="flex items-center gap-2 pb-2 text-sm"><input data-canexport type="checkbox" ${p.canExportGuests ? 'checked' : ''}> Can export guest lists</label>
+          </div>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">${PlanRules.LIMIT_FIELDS.map(f => field(p, f)).join('')}</div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button data-save class="btn-primary !py-2 text-sm">Save plan</button>
+            ${p.isDefault ? '' : '<button data-default class="btn-soft">Make default</button><button data-delete class="rounded-lg border border-rose-300 px-3 py-1.5 text-sm text-rose-600 hover:bg-rose-50">Delete</button>'}
+          </div></section>`;
+        const draw = () => {
+          box.innerHTML = `
+          <p class="text-sm text-slate-500">Limits apply to every host on that plan. Admins are exempt from all limits. New hosts get the <b>default plan</b>; assign other plans on the Clients tab. Changes take effect the next time a host opens the app.</p>
+          ${plans.length ? plans.map(card).join('') : `<div class="card mt-4 text-center"><p class="text-sm text-slate-500">No plans yet. New hosts can’t pick a plan until you create some.</p><button id="seedStd" class="btn-primary mt-3 !py-2 text-sm">Create Starter · Pro Host · VIP</button></div>`}
+          <section class="card mt-6"><h2 class="text-lg font-semibold">Add a plan</h2>
+            <form id="newPlan" class="mt-3 grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end" novalidate>
+              <div><label for="npId" class="text-sm font-medium">Plan ID</label><input id="npId" placeholder="e.g. pro" class="${inp}"></div>
+              <div><label for="npName" class="text-sm font-medium">Display name</label><input id="npName" maxlength="40" placeholder="e.g. Pro" class="${inp}"></div>
+              <button class="btn-soft !py-2">Add plan</button></form>
+            <p id="npErr" role="alert" class="mt-2 hidden text-xs font-medium text-rose-600"></p></section>`;
+          const after = async (msg) => { await load(); await onPlansChanged(); toast(msg); draw(); };
+          const seed = $('#seedStd');
+          if (seed) seed.onclick = async () => { try { await Repo.plans.seed(PlanRules.STANDARD_PLANS); await after('Standard plans created'); } catch (e) { toast(e.message, 6000); } };
+          $('#newPlan').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const id = $('#npId').value.trim().toLowerCase(), name = $('#npName').value.trim(), er = $('#npErr');
+            const msg = !/^[a-z0-9-]{2,24}$/.test(id) ? 'Plan ID: 2–24 lowercase letters, numbers or -.' : plans.some(p => p.id === id) ? 'That plan ID already exists.' : !name ? 'Enter a display name.' : '';
+            er.textContent = msg; er.classList.toggle('hidden', !msg); if (msg) return;
+            try { await Repo.plans.create(id, { name, price: 0, popular: false, canDeleteParties: false, canExportGuests: false, active: true, isDefault: !plans.length, limits: { ...PlanRules.DEFAULT_LIMITS } }); await after(`Plan “${name}” added — set its limits below`); } catch (er2) { toast(er2.message, 6000); }
+          });
+          box.querySelectorAll('[data-plan]').forEach((sec) => {
+            const id = sec.dataset.plan, p = plans.find(x => x.id === id);
+            sec.querySelector('[data-save]').onclick = async () => {
+              const raw = {}; sec.querySelectorAll('input[data-key]').forEach(i => raw[i.dataset.key] = i.value.trim());
+              const res = PlanRules.validateLimits(raw);
+              sec.querySelectorAll('[data-err]').forEach(el => { const m = res.errors[el.dataset.err] || ''; el.textContent = m; el.classList.toggle('hidden', !m); });
+              const name = sec.querySelector('[data-name]').value.trim();
+              const meta = PlanRules.validatePlanMeta({ name, price: sec.querySelector('[data-price]').value });
+              const pe = sec.querySelector('[data-perr]'); pe.textContent = meta.errors.price || ''; pe.classList.toggle('hidden', !meta.errors.price);
+              if (meta.errors.name) return toast(meta.errors.name);
+              if (!res.valid || !meta.valid) return toast('Please fix the highlighted fields', 4000);
+              try { await Repo.plans.update(id, { name, price: meta.price, popular: sec.querySelector('[data-popular]').checked, canDeleteParties: sec.querySelector('[data-candelete]').checked, canExportGuests: sec.querySelector('[data-canexport]').checked, active: sec.querySelector('[data-active]').checked, limits: res.limits }); await after(`“${name}” saved`); } catch (e) { toast('Could not save: ' + e.message, 6000); }
+            };
+            const def = sec.querySelector('[data-default]');
+            if (def) def.onclick = async () => { try { await Repo.plans.setDefault(plans.map(x => x.id), id); await after(`“${p.name}” is now the default plan`); } catch (e) { toast(e.message, 6000); } };
+            const del = sec.querySelector('[data-delete]');
+            if (del) del.onclick = async () => { if (!confirm(`Delete the plan “${p.name}”? Hosts on it will fall back to the default plan.`)) return; try { await Repo.plans.remove(id); await after('Plan deleted'); } catch (e) { toast(e.message, 6000); } };
+          });
+        };
+        draw();
+      },
+
+      /* ----- Clients: who signed up, which plan (admins are exempt) ----- */
+      async clients(box) {
+        let users, plans, adminEmails, subRows = [];
+        try {
+          [users, plans, adminEmails] = await Promise.all([Repo.users.list(), Repo.plans.list(), Repo.admins.list().then(l => l.map(a => a.email))]);
+          try { subRows = await Repo.subscriptions.listAll(); } catch (e) { console.warn('subscriptions unreadable', e); }
+          users.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+        } catch (e) { box.innerHTML = loadErr(e); return; }
+        const def = (plans.find(p => p.isDefault) || { id: 'starter' }).id;
+        const planOf = (u) => PlanRules.currentPlanId(subRows.filter(s => s.uid === u.id), u.planId);
+        const opts = (sel) => (plans.length ? plans : [{ id: 'free', name: 'Free' }]).map(p => `<option value="${esc(p.id)}" ${p.id === sel ? 'selected' : ''}>${esc(p.name)}${p.active === false ? ' (hidden)' : ''}</option>`).join('');
+        const roleLabel = { SUPER_ADMIN: 'Super Admin', ADMIN: 'Admin' };
+        const bd = AdminRules.planBreakdown(users, plans, adminEmails);
+        box.innerHTML = `
+          <div class="flex flex-wrap gap-2 text-sm">${bd.map(b => `<span class="rounded-full bg-indigo-50 px-3 py-1 text-indigo-700">${esc(b.name)}: <b>${b.count}</b></span>`).join('') || '<span class="text-slate-400">No clients yet.</span>'}</div>
+          <div class="mt-4 overflow-x-auto rounded-2xl bg-white shadow"><table class="w-full text-sm">
+            <thead class="bg-slate-50 text-left text-slate-500"><tr><th class="p-3">Name</th><th class="p-3">Email</th><th class="p-3">Plan</th><th class="p-3">Joined</th><th class="p-3">Last login</th></tr></thead>
+            <tbody>${users.length ? users.slice(0, 500).map(u => { const r = AdminRules.getRole(u.email, adminEmails); return `<tr class="border-t"><td class="p-3">${esc(u.displayName) || '—'}</td><td class="p-3 break-all">${esc(u.email)}</td>
+              <td class="p-3">${roleLabel[r] ? `<span class="rounded-full bg-violet-100 px-2 py-0.5 text-xs font-medium text-violet-700">${roleLabel[r]} · unlimited</span>`
+                : `<select data-uid="${esc(u.id)}" aria-label="Plan for ${esc(u.email)}" class="rounded-lg border border-slate-300 px-2 py-1">${(planOf(u) || '') ? '' : '<option value="" selected disabled>No plan chosen</option>'}${opts(planOf(u) || def)}</select>`}</td>
+              <td class="p-3">${fmtTs(u.createdAt)}</td><td class="p-3">${fmtTs(u.lastLoginAt)}</td></tr>`; }).join('') : '<tr><td colspan="5" class="p-6 text-center text-slate-400">No clients yet.</td></tr>'}</tbody></table></div>`;
+        box.querySelectorAll('select[data-uid]').forEach(sel => {
+          const u = users.find(x => x.id === sel.dataset.uid), before = planOf(u);
+          sel.onchange = async () => {
+            const cur = plans.find(p => p.id === before), tgt = plans.find(p => p.id === sel.value);
+            const chk = PlanRules.canChangePlan(cur, tgt, { isAdmin: true });     // admin override: downgrades allowed after confirming
+            if (!chk.ok && chk.kind === 'same') { return; }
+            if (chk.kind === 'downgrade' && !confirm(`Downgrade ${u.email} from ${cur.name} to ${tgt.name}? Hosts can’t do this themselves — this is an admin override.`)) { sel.value = before || ''; return; }
+            try { await Repo.subscriptions.assign(u.id, sel.value, getUser().email); subRows = await Repo.subscriptions.listAll(); toast('Plan updated'); }
+            catch (e) { sel.value = before || ''; toast('Could not update: ' + e.message, 6000); }
+          };
+        });
+      },
+
+      /* ----- Users: every host, their parties and invitations ----- */
+      async users(box) {
+        let users, plans, adminEmails, subRows = [], allParties;
+        try {
+          [users, plans, adminEmails, allParties] = await Promise.all([Repo.users.list(), Repo.plans.list(), Repo.admins.list().then(l => l.map(a => a.email)), Repo.parties.listAll()]);
+          try { subRows = await Repo.subscriptions.listAll(); } catch (e) { console.warn('subscriptions unreadable', e); }
+        } catch (e) { box.innerHTML = loadErr(e); return; }
+        const byUser = UserMetricsRules.partiesByUser(allParties);
+        const showEmails = AdminRules.can(getRole(), 'viewGuestEmails');
+        const planFor = (u) => PlanRules.applyAdminExemption(PlanRules.resolveLimits(plans, PlanRules.currentPlanId(subRows.filter(s => s.uid === u.id), u.planId)), AdminRules.isAdmin(u.email, adminEmails));
+        const rows = users.map(u => ({ ...UserMetricsRules.userRow(u, byUser[u.id] || [], planFor(u)), limits: planFor(u).limits }));
+        let sort = { key: 'totalParties', dir: 'desc' }, filter = { text: '', onlyActive: false }, open = new Set();
+        const guestCache = {}, inviteCache = {};                 // `${uid}/${pid}` -> guest list / invitation log, loaded on demand
+        const badge = { ok: 'bg-slate-100 text-slate-700', near: 'bg-amber-100 text-amber-800', full: 'bg-rose-100 text-rose-700', unlimited: 'bg-slate-100 text-slate-700' };
+        const th = (k, l) => `<th class="p-3"><button data-sort="${k}" class="font-medium hover:text-slate-900">${l}${sort.key === k ? (sort.dir === 'asc' ? ' ▲' : ' ▼') : ''}</button></th>`;
+        const partyRows = (r) => {
+          const ps = (byUser[r.uid] || []).slice().sort((a, b) => String(b.when).localeCompare(String(a.when)));
+          if (!ps.length) return '<p class="p-3 text-sm text-slate-400">No parties yet.</p>';
+          return `<table class="w-full text-sm"><thead class="text-left text-slate-500"><tr><th class="p-2">Party</th><th class="p-2">Date / time</th><th class="p-2">Status</th><th class="p-2">Invitees</th><th class="p-2">Emails sent</th></tr></thead><tbody>${ps.map(p => {
+            const key = r.uid + '/' + p.id, g = guestCache[key], b = UserMetricsRules.partyBreakdown(p, g || null, r.limits, inviteCache[key] || null);
+            return `<tr class="border-t"><td class="p-2 font-medium">${esc(b.title)}</td><td class="p-2">${esc(fmtDate(b.when))}</td>
+              <td class="p-2"><span class="rounded-full px-2 py-0.5 text-xs font-medium ${b.status === 'Closed' ? 'bg-slate-200 text-slate-600' : 'bg-emerald-100 text-emerald-700'}">${b.status === 'Closed' ? 'Closed' : 'Upcoming'}</span></td>
+              <td class="p-2">${b.invitees == null ? `<button data-load="${esc(key)}" class="text-indigo-600 underline">Load</button>` : `<span class="rounded-full px-2 py-0.5 text-xs font-medium ${badge[b.state]}" title="Invitations in the last ${b.window ? b.window.hours : ''} h">${b.invitees} invited · ${b.window ? b.window.used + ' / ' + (b.window.max == null ? '∞' : b.window.max) + ' now' : ''}</span>${b.invitees && showEmails ? `<details class="mt-1"><summary class="cursor-pointer text-xs text-indigo-600">Show emails</summary><ul class="mt-1 break-all text-xs text-slate-600">${g.map(x => `<li>${esc(x.email)} · ${esc(x.status)}${x.invitedAt ? ' · ✉️ sent' : ''}</li>`).join('')}</ul></details>` : ''}`}</td>
+              <td class="p-2">${b.emailsSent == null ? '<span class="text-slate-400" title="Sent before tracking began">—</span>' : b.emailsSent}</td></tr>`; }).join('')}</tbody></table>`;
+        };
+        const draw = () => {
+          const list = UserMetricsRules.sortRows(UserMetricsRules.filterRows(rows, filter), sort.key, sort.dir);
+          box.innerHTML = `
+          <div class="flex flex-wrap items-center gap-3">
+            <label for="uSearch" class="sr-only">Search users</label>
+            <input id="uSearch" type="search" placeholder="Search name, email or UID" value="${esc(filter.text)}" class="w-64 rounded-lg border border-slate-300 px-3 py-2 text-sm">
+            <label class="flex items-center gap-2 text-sm"><input id="uActive" type="checkbox" ${filter.onlyActive ? 'checked' : ''}> Only users with active parties</label>
+            <span class="text-sm text-slate-400">${list.length} of ${rows.length} users</span></div>
+          <div class="mt-4 overflow-x-auto rounded-2xl bg-white shadow"><table class="w-full text-sm">
+            <thead class="bg-slate-50 text-left text-slate-500"><tr><th class="p-3"></th>${th('name', 'Name')}${th('email', 'Email')}<th class="p-3">UID</th>${th('planName', 'Plan')}${th('activeParties', 'Active parties')}${th('totalParties', 'Total parties')}${th('invitationsSent', 'Invitations sent')}</tr></thead>
+            <tbody>${list.length ? list.map(r => `<tr class="border-t"><td class="p-3"><button data-open="${esc(r.uid)}" aria-expanded="${open.has(r.uid)}" aria-label="Show parties for ${esc(r.email)}" class="text-slate-500">${open.has(r.uid) ? '▾' : '▸'}</button></td>
+              <td class="p-3">${esc(r.name) || '—'}</td><td class="p-3 break-all">${esc(r.email)}</td>
+              <td class="p-3"><code class="text-xs" title="${esc(r.uid)}">${esc(r.uid.slice(0, 8))}…</code> <button data-copy="${esc(r.uid)}" class="text-xs text-indigo-600 underline">copy</button></td>
+              <td class="p-3">${esc(r.planName)}</td><td class="p-3">${r.activeParties}</td><td class="p-3">${r.totalParties}</td>
+              <td class="p-3">${r.invitationsSent}${r.hasUntracked ? '<span class="text-slate-400" title="Some older parties were sent before tracking began"> *</span>' : ''}</td></tr>
+              ${open.has(r.uid) ? `<tr class="bg-slate-50"><td></td><td colspan="7" class="p-3"><p class="mb-2 text-xs text-slate-500">Email invitations per party: ${r.limits.maxEmailsPerParty == null ? 'unlimited' : r.limits.maxEmailsPerParty + ' per ' + r.limits.cooldownHours + ' h'}${showEmails ? '' : ' · invitee addresses are visible to the Super Admin only'}</p>${partyRows(r)}</td></tr>` : ''}`).join('') : '<tr><td colspan="8" class="p-6 text-center text-slate-400">No users match.</td></tr>'}</tbody></table></div>
+          <p class="mt-2 text-xs text-slate-400">“Invitations sent” counts emails sent from v21 on. * = includes older parties sent before tracking began. Party counts exclude parties moved by the old migration.</p>`;
+          $('#uSearch').oninput = (e) => { filter.text = e.target.value; const pos = e.target.selectionStart; draw(); const el = $('#uSearch'); el.focus(); el.setSelectionRange(pos, pos); };
+          $('#uActive').onchange = (e) => { filter.onlyActive = e.target.checked; draw(); };
+          box.querySelectorAll('[data-sort]').forEach(b => b.onclick = () => { const k = b.dataset.sort; sort = { key: k, dir: sort.key === k && sort.dir === 'desc' ? 'asc' : 'desc' }; draw(); });
+          box.querySelectorAll('[data-open]').forEach(b => b.onclick = async () => {
+            const id = b.dataset.open; open.has(id) ? open.delete(id) : open.add(id); draw();
+            if (open.has(id)) await loadGuests(id);
+          });
+          box.querySelectorAll('[data-copy]').forEach(b => b.onclick = () => copy(b.dataset.copy));
+          box.querySelectorAll('[data-load]').forEach(b => b.onclick = () => { const [uid, pid] = b.dataset.load.split('/'); loadGuests(uid, pid); });
+        };
+        async function loadGuests(uid, only) {                   // guest lists are read only for expanded users
+          const ps = (byUser[uid] || []).filter(p => !only || p.id === only);
+          try { await Promise.all(ps.map(async p => { const k = uid + '/' + p.id; [guestCache[k], inviteCache[k]] = await Promise.all([Repo.guests.list(uid, p.id), Repo.invitations.list(uid, p.id)]); })); draw(); }
+          catch (e) { toast('Could not load invitees: ' + e.message, 6000); }
+        }
+        draw();
+      },
+
+      /* ----- Discounts: code table ----- */
+      async discounts(box) {
+        let list, editing = null, errors = {}, draft = {};
+        const load = async () => { list = await Repo.discounts.list(); };
+        try { await load(); } catch (e) { box.innerHTML = loadErr(e); return; }
+        const badge = (s) => `<span class="rounded-full px-2 py-0.5 text-xs font-medium ${({ Active: 'bg-emerald-100 text-emerald-700', Inactive: 'bg-slate-200 text-slate-600', Expired: 'bg-amber-100 text-amber-700', Exhausted: 'bg-rose-100 text-rose-700' })[s]}">${s}</span>`;
+        const fe = (k) => errors[k] ? `<p role="alert" class="mt-0.5 text-xs font-medium text-rose-600">${esc(errors[k])}</p>` : '';
+        const form = () => `<section class="card mt-4"><h2 class="text-lg font-semibold">${editing === 'new' ? 'Add new discount' : 'Edit ' + esc(editing)}</h2>
+          <form id="dForm" class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-5" novalidate>
+            <div><label for="dCode" class="text-sm font-medium">Discount code</label><input id="dCode" value="${esc(draft.code)}" ${editing === 'new' ? '' : 'disabled'} placeholder="SUMMER20" class="${inp} uppercase">${fe('code')}</div>
+            <div><label for="dType" class="text-sm font-medium">Type</label><select id="dType" class="${inp}">${Object.entries(DiscountRules.TYPES).map(([k, l]) => `<option value="${k}" ${draft.type === k ? 'selected' : ''}>${l}</option>`).join('')}</select>${fe('type')}</div>
+            <div><label for="dValue" class="text-sm font-medium">Value</label><input id="dValue" type="number" step="0.01" min="0" value="${esc(draft.value)}" placeholder="20 or 15.00" class="${inp}">${fe('value')}</div>
+            <div><label for="dExp" class="text-sm font-medium">Valid until</label><input id="dExp" type="date" value="${esc(draft.expiresAt)}" class="${inp}">${fe('expiresAt')}</div>
+            <div><label for="dLimit" class="text-sm font-medium">Usage limit</label><input id="dLimit" type="number" step="1" min="1" value="${esc(draft.usageLimit)}" placeholder="Unlimited" class="${inp}">${fe('usageLimit')}</div>
+            <div class="flex gap-2 sm:col-span-2 lg:col-span-5"><button class="btn-primary !py-2 text-sm">${editing === 'new' ? 'Add discount' : 'Save changes'}</button><button type="button" id="dCancel" class="btn-line">Cancel</button></div>
+          </form></section>`;
+        const draw = () => {
+          const td = today();
+          box.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-3"><p class="text-sm text-slate-500">Codes are stored now and will apply at checkout once paid plans launch.</p>
+            <button id="dAdd" class="btn-primary !py-2 text-sm">+ Add New Discount</button></div>
+          ${editing ? form() : ''}
+          <div class="mt-4 overflow-x-auto rounded-2xl bg-white shadow"><table class="w-full text-sm">
+            <thead class="bg-slate-50 text-left text-slate-500"><tr><th class="p-3">Discount code</th><th class="p-3">Type</th><th class="p-3">Value</th><th class="p-3">Expiry date</th><th class="p-3">Redemptions</th><th class="p-3">Status</th><th class="p-3 text-right">Actions</th></tr></thead>
+            <tbody>${list.length ? list.map(d => { const st = DiscountRules.discountState(d, td); return `<tr class="border-t">
+              <td class="p-3 font-mono font-semibold">${esc(d.code)}</td><td class="p-3">${esc(DiscountRules.TYPES[d.type] || d.type)}</td><td class="p-3">${esc(DiscountRules.formatValue(d))}</td>
+              <td class="p-3">${d.expiresAt ? esc(d.expiresAt) : '<span class="text-slate-400">No expiry</span>'}</td>
+              <td class="p-3">${d.used || 0} / ${d.usageLimit != null ? d.usageLimit : '∞'}</td>
+              <td class="p-3"><div class="flex items-center gap-2"><button data-toggle="${esc(d.id)}" role="switch" aria-checked="${!!d.active}" aria-label="Active: ${esc(d.code)}" class="relative h-6 w-11 shrink-0 rounded-full transition-colors ${d.active ? 'bg-emerald-500' : 'bg-slate-300'}"><span class="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all ${d.active ? 'left-[1.4rem]' : 'left-0.5'}"></span></button>${badge(st)}</div></td>
+              <td class="p-3"><div class="flex justify-end gap-1"><button data-edit="${esc(d.id)}" class="rounded bg-indigo-50 px-2 py-1 text-indigo-700 hover:bg-indigo-100">Edit</button><button data-del="${esc(d.id)}" class="rounded bg-rose-50 px-2 py-1 text-rose-600 hover:bg-rose-100">Delete</button></div></td></tr>`; }).join('')
+              : '<tr><td colspan="7" class="p-6 text-center text-slate-400">No discount codes yet.</td></tr>'}</tbody></table></div>`;
+          $('#dAdd').onclick = () => { editing = 'new'; errors = {}; draft = { type: 'percent', value: '', code: '', expiresAt: '', usageLimit: '' }; draw(); $('#dCode').focus(); };
+          box.querySelectorAll('[data-edit]').forEach(b => b.onclick = () => { const d = list.find(x => x.id === b.dataset.edit); editing = d.id; errors = {}; draft = { code: d.code, type: d.type, value: d.value, expiresAt: d.expiresAt || '', usageLimit: d.usageLimit ?? '' }; draw(); $('#dValue').focus(); });
+          box.querySelectorAll('[data-toggle]').forEach(b => b.onclick = async () => { const d = list.find(x => x.id === b.dataset.toggle); try { await Repo.discounts.update(d.id, { active: !d.active }); d.active = !d.active; draw(); } catch (e) { toast(e.message, 6000); } });
+          box.querySelectorAll('[data-del]').forEach(b => b.onclick = async () => { const d = list.find(x => x.id === b.dataset.del); if (!confirm(`Delete discount code ${d.code}?`)) return; try { await Repo.discounts.remove(d.id); await load(); toast('Discount deleted'); draw(); } catch (e) { toast(e.message, 6000); } });
+          const f = $('#dForm'); if (!f) return;
+          $('#dCancel').onclick = () => { editing = null; draw(); };
+          const read = () => ({ code: $('#dCode').value, type: $('#dType').value, value: $('#dValue').value, expiresAt: $('#dExp').value, usageLimit: $('#dLimit').value });
+          f.addEventListener('submit', async (e) => {
+            e.preventDefault(); draft = read();
+            const isNew = editing === 'new';
+            const res = DiscountRules.validateDiscount(isNew ? draft : { ...draft, code: editing }, { existingCodes: list.map(d => d.code), isNew, today: today() });
+            errors = res.errors;
+            if (!res.valid) { draw(); return toast('Please fix the highlighted fields', 4000); }
+            try {
+              const { code, ...rest } = res.clean;
+              if (isNew) await Repo.discounts.create(code, rest); else await Repo.discounts.update(editing, rest);
+              await load(); toast(isNew ? `${code} added` : 'Discount saved'); editing = null; errors = {}; draw();
+            } catch (er) { toast('Could not save: ' + er.message, 6000); }
+          });
+        };
+        draw();
+      },
+
+      /* ----- Admins: add / remove secondary admins (Super Admin only) ----- */
+      async admins(box) {
+        if (!AdminRules.can(getRole(), 'manageAdmins')) { box.innerHTML = '<p class="rounded-lg bg-amber-50 p-3 text-sm text-amber-800">Only the Super Admin can manage admins.</p>'; return; }
+        let list;
+        const load = async () => { list = (await Repo.admins.list()).sort((a, b) => a.email.localeCompare(b.email)); };
+        try { await load(); } catch (e) { box.innerHTML = loadErr(e); return; }
+        const draw = () => {
+          box.innerHTML = `
+          <p class="text-sm text-slate-500">Admins can use the app during maintenance, manage plans, limits, discounts and client plans, and are exempt from plan limits. They cannot add or remove admins.</p>
+          <div class="mt-4 overflow-x-auto rounded-2xl bg-white shadow"><table class="w-full text-sm">
+            <thead class="bg-slate-50 text-left text-slate-500"><tr><th class="p-3">Email</th><th class="p-3">Role</th><th class="p-3">Added</th><th class="p-3 text-right">Actions</th></tr></thead>
+            <tbody>
+              <tr class="border-t"><td class="p-3 break-all">${esc(SUPER_ADMIN_EMAIL)}</td><td class="p-3"><span class="rounded-full bg-violet-100 px-2 py-0.5 text-xs font-medium text-violet-700">Super Admin</span></td><td class="p-3 text-slate-400">Built in</td><td class="p-3 text-right text-xs text-slate-400">🔒 Permanent</td></tr>
+              ${list.map(a => `<tr class="border-t"><td class="p-3 break-all">${esc(a.email)}</td><td class="p-3"><span class="rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-medium text-indigo-700">Admin</span></td><td class="p-3">${fmtTs(a.addedAt)}</td>
+                <td class="p-3 text-right"><button data-rm="${esc(a.id)}" class="rounded bg-rose-50 px-2 py-1 text-rose-600 hover:bg-rose-100">Remove</button></td></tr>`).join('')}
+            </tbody></table></div>
+          <section class="card mt-6"><h2 class="text-lg font-semibold">Add an admin</h2>
+            <form id="adForm" class="mt-3 flex flex-col gap-2 sm:flex-row" novalidate>
+              <div class="flex-1"><label for="adEmail" class="text-sm font-medium">Google account email</label><input id="adEmail" type="email" placeholder="name@gmail.com" class="${inp}"></div>
+              <button class="btn-soft !py-2 sm:self-end">Add admin</button></form>
+            <p id="adErr" role="alert" class="mt-2 hidden text-xs font-medium text-rose-600"></p>
+            <p class="mt-2 text-xs text-slate-400">They get access the next time they sign in with that Google account.</p></section>`;
+          $('#adForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const res = AdminRules.validateAdminEmail($('#adEmail').value, list.map(a => a.email)), er = $('#adErr');
+            er.textContent = res.error; er.classList.toggle('hidden', !res.error); if (res.error) return;
+            try { await Repo.admins.add(res.email, getUser().email); await load(); await onAdminsChanged(); toast(`${res.email} is now an admin`); draw(); } catch (e2) { toast('Could not add: ' + e2.message, 6000); }
+          });
+          box.querySelectorAll('[data-rm]').forEach(b => b.onclick = async () => {
+            if (!confirm(`Remove admin access for ${b.dataset.rm}?`)) return;
+            try { await Repo.admins.remove(b.dataset.rm); await load(); await onAdminsChanged(); toast('Admin removed'); draw(); } catch (e) { toast(e.message, 6000); }
+          });
+        };
+        draw();
+      },
+    };
+
+    return {
+      title: () => 'Admin',
+      view(tab) { tab = sections[tab] && tabsFor().some(([id]) => id === tab) ? tab : 'overview'; return `${tabBar(tab)}<div id="adminBody"><p class="text-sm text-slate-400">Loading…</p></div>`; },
+      mount(tab) { tab = sections[tab] && tabsFor().some(([id]) => id === tab) ? tab : 'overview'; sections[tab]($('#adminBody')); },
+    };
+  }
+  /* ===================================== END ADMIN SCREENS ===================================== */
+
+  /* ========================== ORGANIZER APP ========================== */
+  function organizerApp() {
+    /* ---------- Data state. React: context/store (user, parties, guestsByParty) ---------- */
+    let user = null, parties = [], legacy = [], gmap = {}, subs = {}, photoData = '';
+    // Account-level state: admin flag, plan + limits, platform config (maintenance).
+    let role = 'GUEST', isAdminUser = false, adminEmails = [], plansList = [];
+    let myPlan = PlanRules.resolveLimits([], null);
+    let mySubs = [], myPlanId = null;
+    let appConfig = { maintenance: false, message: '' }, configLoaded = false, authResolved = false, ready = false, mode = null;
+
+    /* ---------- UI state. React: useState / useReducer ---------- */
+    const store = {
+      get() { try { return localStorage.getItem(COLLAPSE_KEY) === '1'; } catch { return false; } },
+      set(v) { try { localStorage.setItem(COLLAPSE_KEY, v ? '1' : '0'); } catch { /* storage unavailable: fine */ } },
+    };
+    const ui = { isOpen: false, isCollapsed: store.get() };
+
+    /* ---------- Navigation ---------- */
+    const NAV = [
+      { id: 'dashboard', label: 'Dashboard',    icon: 'home',    href: '#/dashboard' },
+      { id: 'create',    label: 'Create party', icon: 'plus',    href: '#/new' },
+      { id: 'settings',  label: 'Settings',     icon: 'sliders', href: '#/settings' },
+    ];
+    const ADMIN_NAV = { id: 'admin', label: 'Admin', icon: 'shield', href: '#/admin/overview' };   // rendered for admins only
+    const navItems = () => isAdminUser ? [...NAV, ADMIN_NAV] : NAV;
+    const NAV_FOR = { dashboard: 'dashboard', party: 'dashboard', edit: 'dashboard', new: 'create', settings: 'settings', admin: 'admin' };
+    const ICONS = {
+      home:    '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/>',
+      plus:    '<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>',
+      sliders: '<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>',
+      menu:    '<path d="M4 6h16M4 12h16M4 18h16"/>',
+      panel:   '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/>',
+      shield:  '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+      out:     '<path d="M9 4H5v16h4"/><path d="M16 8l4 4-4 4M20 12H9"/>',
+    };
+    const Icon = (name, cls = 'h-5 w-5') =>
+      `<svg class="${cls} shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`;
+    const NavItem = ({ id, label, icon, href }) =>
+      `<a href="${href}" data-action="close" data-nav="${id}" title="${label}" class="nav-link">${Icon(icon)}<span class="label truncate">${label}</span></a>`;
+
+    const parseRoute = () => {
+      const [name = '', id = ''] = location.hash.replace(/^#\/?/, '').split('/');
+      return { name: ROUTES[name] ? name : 'dashboard', id };
+    };
+
+    /* ---------- DOM refs ---------- */
+    const shell = $('#shell'), guestRoot = $('#guestRoot'), sidebar = $('#sidebar'), nav = $('#nav'), main = $('#main');
+    const menuBtn = $('#menuBtn'), collapseBtn = $('#collapseBtn'), pageTitle = $('#pageTitle');
+    const isMobile = matchMedia('(max-width: 1023px)');
+    $('#appName').textContent = APP_NAME;
+    const renderNav = () => { nav.innerHTML = navItems().map(NavItem).join(''); };
+    renderNav();
+    menuBtn.innerHTML = Icon('menu');
+    collapseBtn.innerHTML = Icon('panel');
+    $('#signoutIcon').innerHTML = Icon('out');
+
+    const showShell = (on) => { shell.hidden = !on; guestRoot.hidden = on; };
+
+    /* ---------- Shared small templates (each becomes a React component) ---------- */
+    const Stat = (label, value, color) => `<div class="${color} rounded-2xl p-4 text-white shadow"><div class="text-3xl font-extrabold">${value}</div><div class="text-sm opacity-90">${label}</div></div>`;
+    const badge = (s) => ({
+      accepted: '<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-medium">Accepted</span>',
+      declined: '<span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 font-medium">Declined</span>',
+      pending:  '<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">Pending</span>',
+    }[s]);
+    const partyTitle = (p) => `${p.name}'s Birthday`;
+    const getParty = (id) => parties.find(p => p.id === id) || null;
+
+    /* ---------- Auth + gate (sign-in / maintenance / app) ---------- */
+    Repo.config.watch((c) => { appConfig = c; configLoaded = true; gate(); },
+      () => { configLoaded = true; gate(); });                       // unreadable config (rules not published yet) = treat as live
+
+    Repo.auth.onChange(async (u) => {
+      user = u; authResolved = true; ready = false; mode = null;
+      if (!u) {
+        Object.values(subs).forEach(f => f()); subs = {}; parties = []; legacy = []; gmap = {}; adminEmails = []; setRole(); renderNav();
+        return gate();
+      }
+      if (landOnDashboard) { landOnDashboard = false; if (location.hash !== '#/dashboard') history.replaceState(null, '', '#/dashboard'); }
+      $('#userName').textContent = u.displayName || 'Signed in';
+      $('#userEmail').textContent = u.email || '';
+      $('#userAvatar').textContent = ((u.displayName || u.email || '?')[0] || '?').toUpperCase();
+      showShell(false);
+      app.innerHTML = `<p class="text-center text-slate-500 mt-20">Loading your parties…</p>`;
+      let loadErr = null;                                  // everything the app needs loads at the same time
+      await Promise.all([Repo.profile.save(u), loadRole(u).then(() => loadAccount()), loadParties().catch(e => { loadErr = e; })]);
+      if (loadErr) { console.error(loadErr); app.innerHTML = `<p class="text-center text-rose-600 mt-20">Could not load your parties: ${esc(loadErr.message)}</p>`; return; }
+      ready = true; gate();
+    });
+
+    function gate() {
+      if (!authResolved || !configLoaded) return;
+      if (!user) { mode = appConfig.maintenance ? 'maint-out' : 'signin'; showShell(false); return appConfig.maintenance ? renderMaintenance(false) : renderSignIn(); }
+      if (!ready) return;
+      if (!AdminRules.canUseApp(appConfig, user.email, adminEmails)) { mode = 'maint-in'; showShell(false); return renderMaintenance(true); }
+      if (needsPlan()) { mode = 'plan'; showShell(false); return renderPlanPicker(); }
+      if (mode !== 'app') { mode = 'app'; showShell(true); renderAll(); }
+    }
+
+    /* ---------- Onboarding: choose a plan (new hosts only; admins skip it) ---------- */
+    // A host without an active plan must pick one. Only offered when plans exist (otherwise the built-in defaults apply).
+    const needsPlan = () => !isAdminUser && plansList.some(p => p.active !== false) && !myPlanId;
+    function renderPlanPicker() {
+      const list = plansList.filter(p => p.active !== false).sort((a, b) => PlanRules.priceOf(a) - PlanRules.priceOf(b));
+      const money = (n) => n === 0 ? 'Free' : '$' + n.toFixed(2).replace(/\.00$/, '') ;
+      const lim = (v, one, many) => v == null ? `Unlimited ${many}` : `${v} ${v === 1 ? one : many}`;
+      let coupon = null;                                        // validated (not redeemed) discount
+      const cardHtml = (p) => {
+        const price = PlanRules.priceOf(p), free = PlanRules.isFree(p), l = { ...PlanRules.DEFAULT_LIMITS, ...(p.limits || {}) };
+        const disc = coupon && !free ? DiscountRules.applyDiscount(price, coupon) : null;
+        return `<article class="relative flex flex-col rounded-3xl bg-white p-6 shadow-lg ${p.popular ? 'ring-2 ring-pink-500' : ''}" data-plan="${esc(p.id)}">
+          ${p.popular ? '<span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-pink-500 px-3 py-0.5 text-xs font-bold text-white">Most Popular</span>' : ''}
+          <h2 class="text-xl font-extrabold">${esc(p.name)}</h2>
+          <p class="mt-2 text-3xl font-extrabold">${disc != null ? `<s class="mr-1 text-lg font-medium text-slate-400">${money(price)}</s>${money(disc)}` : money(price)}${free ? '' : '<span class="text-sm font-medium text-slate-500"> /mo</span>'}</p>
+          <ul class="mt-4 flex-1 space-y-1.5 text-sm text-slate-600">
+            <li>🎉 ${l.maxParties == null ? 'Unlimited parties' : 'Up to ' + l.maxParties + ' ' + (l.maxParties === 1 ? 'party' : 'parties') + ' in total'}</li>
+            <li>✉️ ${l.maxEmailsPerParty == null ? 'Unlimited email invitations per party' : 'Up to ' + l.maxEmailsPerParty + ' email invitations per party'}</li></ul>
+          ${free ? `<button data-pick="${esc(p.id)}" class="btn-primary mt-5">Continue with Free Plan</button>`
+                 : `<button disabled class="mt-5 cursor-not-allowed rounded-xl bg-slate-100 px-4 py-2.5 text-sm font-semibold text-slate-400">Coming soon</button>`}
+        </article>`;
+      };
+      const draw = () => {
+        app.innerHTML = `
+        <div class="mx-auto max-w-5xl px-2 pb-10 pt-6">
+          <div class="text-center"><div class="text-5xl">🎂</div><h1 class="mt-2 text-3xl font-extrabold">Choose your plan</h1>
+            <p class="mt-1 text-slate-500">Welcome, ${esc((user.displayName || '').split(' ')[0] || 'host')}! Start free — paid plans are on the way.</p></div>
+          <div class="mt-8 grid gap-6 md:grid-cols-${Math.min(list.length, 3) || 1}">${list.map(cardHtml).join('')}</div>
+          <form id="cpForm" class="mx-auto mt-8 flex max-w-sm gap-2" novalidate>
+            <label for="cpCode" class="sr-only">Coupon code</label>
+            <input id="cpCode" placeholder="Coupon code" autocomplete="off" class="flex-1 rounded-xl border border-slate-300 px-3 py-2 text-sm uppercase">
+            <button class="btn-soft">Apply</button></form>
+          <p id="cpMsg" role="status" class="mt-2 text-center text-sm"></p>
+          <p class="mt-6 text-center"><button id="ppOut" class="text-sm text-slate-400 underline">Sign out</button></p>
+        </div>`;
+        $('#ppOut').onclick = () => Repo.auth.signOut();
+        $('#cpForm').onsubmit = async (e) => {
+          e.preventDefault();
+          const msg = $('#cpMsg'), code = DiscountRules.normalizeCode($('#cpCode').value);
+          const say = (m, ok) => { msg.textContent = m; msg.className = 'mt-2 text-center text-sm font-medium ' + (ok ? 'text-emerald-600' : 'text-rose-600'); };
+          if (!code) return say('Enter a coupon code.', false);
+          try {
+            const d = await Repo.discounts.lookup(code);
+            const st = d ? DiscountRules.discountState(d, PlanRules.dayKey()) : '';
+            if (!d || st !== 'Active') { coupon = null; say(d ? 'That code is not valid right now.' : 'Code not found.', false); }
+            else { coupon = d; say(`✓ ${DiscountRules.formatValue(d)} off — applies when paid plans launch. (Not redeemed yet.)`, true); }
+          } catch (er) { coupon = null; say('Could not check the code. Try again.', false); }
+          const keep = msg.textContent, cls = msg.className, val = $('#cpCode').value; draw(); $('#cpMsg').textContent = keep; $('#cpMsg').className = cls; $('#cpCode').value = val;
+        };
+        app.querySelectorAll('[data-pick]').forEach(b => b.onclick = async () => {
+          b.disabled = true; b.textContent = 'Setting up…';
+          try {
+            await Repo.subscriptions.startFree(user.uid, b.dataset.pick);
+            await loadAccount(); mode = null; gate(); location.hash = '#/dashboard';
+          } catch (er) { console.error(er); b.disabled = false; b.textContent = 'Continue with Free Plan'; toast('Could not start your plan: ' + er.message, 7000); }
+        });
+      };
+      draw();
+    }
+
+    // Every sign-in the person starts lands on the Dashboard (a plain page reload keeps whatever page they were on).
+    let landOnDashboard = false;
+    const signIn = () => { landOnDashboard = true; return Repo.auth.signInWithGoogle().catch(e => { landOnDashboard = false; toast(e.message); }); };
+
+    function renderMaintenance(signedIn) {
+      app.innerHTML = `
+      <div class="mx-auto mt-10 max-w-md rounded-3xl bg-white p-8 text-center shadow-xl">
+        <div class="text-6xl">🛠️</div>
+        <h1 class="mt-3 text-2xl font-extrabold">Under maintenance</h1>
+        <p class="mt-2 text-slate-600">${esc(appConfig.message) || 'Birthday Bash is down for scheduled maintenance. We’ll be back shortly — thank you for your patience!'}</p>
+        <p class="mt-3 text-sm text-slate-400">Invitation links you received still work for RSVPs.</p>
+        ${signedIn ? `<button id="mOut" class="btn-line mt-6">Sign out</button>` : `<button id="mAdmin" class="mt-6 text-sm text-slate-400 underline">Sign in</button>`}
+      </div>`;
+      if (signedIn) $('#mOut').onclick = () => Repo.auth.signOut();
+      else $('#mAdmin').onclick = signIn;
+    }
+
+    function renderSignIn() {
+      app.innerHTML = `
+      <div class="max-w-md mx-auto bg-white rounded-3xl shadow-xl p-8 text-center mt-10">
+        <div class="text-6xl mb-3">🎂</div>
+        <h1 class="text-2xl font-extrabold">Birthday Bash</h1>
+        <p class="text-slate-500 mt-2 mb-6">Sign in to create invitations and track replies live.</p>
+        <button id="signin" class="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500 to-amber-500 text-white font-semibold shadow hover:opacity-90">Sign in with Google</button>
+      </div>`;
+      $('#signin').onclick = signIn;
+    }
+
+    /* ---------- Account: role, plan + limits ---------- */
+    // Role comes from the verified email (+ the admins list); it is never read from an editable profile field.
+    function setRole() {
+      role = AdminRules.getRole(user && user.email, adminEmails);
+      isAdminUser = AdminRules.isAdmin(user && user.email, adminEmails);
+      const badge = $('#userRole'), label = { SUPER_ADMIN: 'Super Admin', ADMIN: 'Admin' }[role];
+      badge.textContent = label || ''; badge.classList.toggle('hidden', !label);
+    }
+    async function loadRole(u) {
+      adminEmails = [];
+      try { if (await Repo.admins.has((u.email || '').toLowerCase())) adminEmails = [u.email]; } catch { /* not readable: the Super Admin is still recognised from config */ }
+      setRole(); renderNav();
+    }
+    async function loadAdminList() {                 // after the Super Admin edits the list, refresh own state
+      renderNav();
+    }
+    async function loadAccount() {
+      let legacyPlanId = null;
+      [plansList, legacyPlanId, mySubs] = await Promise.all([
+        Repo.plans.list().catch(() => []), Repo.profile.planId(user.uid).catch(() => null), Repo.subscriptions.list(user.uid).catch(() => [])]);
+      myPlanId = PlanRules.currentPlanId(mySubs, legacyPlanId);
+      // A lapsed paid plan has no active subscription but a stale planId: that host falls back to the default (Starter). Data is kept.
+      myPlan = PlanRules.applyAdminExemption(PlanRules.resolveLimits(plansList, myPlanId), isAdminUser);   // admins: no limits
+    }
+
+    const createdCount = () => parties.length;                       // lifetime count: hosts without the delete privilege can never lose a party
+    const createCheck = () => PlanRules.canUserCreateParty(myPlan, createdCount(), { isAdmin: isAdminUser });
+
+    /* ---------- Parties + live guests ---------- */
+    async function loadParties() {
+      const [list, leg] = await Promise.all([Repo.parties.list(user.uid), Repo.legacy.list(user.uid).catch(e => { console.warn('legacy check skipped', e); return []; })]);
+      parties = list; legacy = leg;
+      // One live guest listener per party; drop listeners for parties that no longer exist.
+      const ids = new Set(parties.map(p => p.id));
+      Object.keys(subs).forEach(id => { if (!ids.has(id)) { subs[id](); delete subs[id]; delete gmap[id]; } });
+      parties.forEach(p => {
+        if (subs[p.id]) return;
+        subs[p.id] = Repo.guests.watch(user.uid, p.id, (list) => { gmap[p.id] = list; onGuestsChanged(p.id); }, (e) => console.warn('guest listener', e));
+      });
+    }
+
+    /* ---------- Email + links (take the party explicitly: no hidden "current") ---------- */
+    const inviteReady = () => emailReady && !EMAILJS.inviteTemplateId.startsWith('YOUR_');
+    const guestLink = (p, g) => {
+      const u = new URL(baseUrl());
+      u.searchParams.set('o', user.uid);
+      u.searchParams.set('partyId', p.id);
+      u.searchParams.set('guestEmail', g.email);
+      u.searchParams.set('t', g.id);
+      return u.toString();
+    };
+    async function sendInviteEmail(current, g, reminder = false) {
+      const t = turning(current.birth, current.when);
+      const when = fmtRange(current.when, current.endWhen);
+      const title = `${current.name}'s ${t ? ord(t) + ' ' : ''}Birthday`;
+      const link = guestLink(current, g);
+      const subject = reminder ? `Reminder: please RSVP to ${title} 🎈` : `You're invited to ${title}! 🎉`;
+      const heading = reminder ? `🎈 A friendly reminder: ${esc(title)}` : `🎉 You're invited to ${esc(title)}!`;
+      const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#222;line-height:1.5">
+<h2 style="color:#db2777;margin:0 0 6px">${heading}</h2>
+${reminder ? `<p style="margin:0 0 12px">We haven't heard from you yet. We'd love to know if you can make it!</p>` : ''}
+${t ? `<p style="font-size:18px;font-weight:bold;color:#d97706;margin:0 0 12px">🎈 Turning ${t}!</p>` : ''}
+<p style="margin:4px 0">📅 <b>${esc(when)}</b></p>
+<p style="margin:4px 0">📍 <a href="${esc(mapUrl(current.venue))}" style="color:#4f46e5">${esc(current.venue)}</a> <span style="color:#888;font-size:12px">(tap for map)</span></p>
+${current.theme ? `<p style="margin:4px 0">👗 Dress code / theme: <b>${esc(current.theme)}</b></p>` : ''}
+${current.rsvpBy ? `<p style="margin:4px 0">⏰ Please reply by <b>${esc(fmtDay(current.rsvpBy))}</b></p>` : ''}
+${current.phone ? `<p style="margin:4px 0">📞 Host: <a href="${esc(telHref(current.phone))}" style="color:#4f46e5">${esc(current.phone)}</a></p>` : ''}
+${current.note ? `<p style="margin:12px 0;padding:10px 12px;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;white-space:pre-line">💌 ${esc(current.note)}</p>` : ''}
+<p style="margin:20px 0 10px"><a href="${esc(link)}" style="background:#ec4899;color:#ffffff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block">RSVP now</a></p>
+<p style="margin:0 0 16px"><a href="${esc(googleCalUrl(current))}" style="color:#4f46e5">📆 Add to Google Calendar</a></p>
+<p style="font-size:12px;color:#666;margin:0">If the button doesn't work, open this link:<br><a href="${esc(link)}">${esc(link)}</a></p>
+</div>`;
+      const text = [
+        reminder ? `Friendly reminder: ${title}. We haven't heard from you yet.` : `You're invited to ${title}!${t ? ' (Turning ' + t + ')' : ''}`,
+        '',
+        `📅 ${when}`,
+        `📍 ${current.venue}`,
+        current.theme ? `👗 Dress code / theme: ${current.theme}` : '',
+        current.rsvpBy ? `⏰ Please reply by ${fmtDay(current.rsvpBy)}` : '',
+        current.phone ? `📞 Host: ${current.phone}` : '',
+        current.note ? `\n💌 ${current.note}` : '',
+        '',
+        'Please RSVP here:',
+        link
+      ].filter((x, i, a) => x !== '' || a[i - 1] !== '').join('\n');
+      await (await mailer()).send(EMAILJS.serviceId, EMAILJS.inviteTemplateId, {
+        to_email: g.email,
+        message_html: html,
+        subject,
+        message: text,
+        party_name: title,
+        party_when: when,
+        party_venue: current.venue,
+        invite_link: link
+      });
+      // Count it for the admin Users tab (best effort — never blocks the email flow).
+      try { await Repo.parties.addSent(user.uid, current.id, 1); if (!reminder && g.id) await Repo.guests.markSent(user.uid, current.id, g.id); }
+      catch (e) { console.warn('send not tracked', e); }
+    }
+
+    const adminScreens = makeAdminScreens({ getUser: () => user, getRole: () => role, getAdminEmails: () => adminEmails, onPlansChanged: loadAccount, onAdminsChanged: loadAdminList });
+
+    /* =====================  SCREENS  =====================
+       Each screen = { title, view(id) -> html, mount(id) -> wires events }.
+       React: each becomes a component rendered by a <Route>. */
+    const ROUTES = {
+
+      /* ---------- Dashboard: always the landing page ---------- */
+      dashboard: {
+        title: () => 'Dashboard',
+        view(tab) {
+          tab = tab === 'past' ? 'past' : 'upcoming';
+          const { open: upcoming, closed: past } = PartyRules.splitByStatus(parties);   // Closed parties never reach the summary widgets
+          const c = PartyRules.summarizeParties(upcoming, gmap);
+          const card = (p) => {
+            const k = PartyRules.tally(gmap[p.id] || []), t = turning(p.birth, p.when), st = PartyRules.getEventStatus(p);
+            const stCls = { Upcoming: 'bg-indigo-100 text-indigo-700', Active: 'bg-emerald-100 text-emerald-700', Closed: 'bg-slate-200 text-slate-600' }[st];
+            const stLine = st === 'Closed' ? '🔒 Closed' : st === 'Active' ? '🎉 Happening now' : countdownText(p.when);
+            return `<a href="#/party/${p.id}" class="party-card group" aria-label="Manage ${esc(partyTitle(p))}">
+              <div class="flex items-center gap-4">
+                <img src="${esc(p.photo || placeholderImg)}" onerror="this.src='${placeholderImg}'" alt="" class="h-20 w-20 shrink-0 rounded-xl object-cover">
+                <div class="min-w-0 flex-1">
+                  <h3 class="font-semibold leading-tight">${esc(partyTitle(p))}${t ? `<span class="block text-sm font-bold text-pink-600">turning ${t}</span>` : ''}</h3>
+                  <span class="inline-block rounded-full px-2 py-0.5 text-xs font-medium ${stCls}">${st}</span>
+                  <p class="truncate text-sm text-slate-500">📅 ${esc(fmtDate(p.when))}</p>
+                  <p class="truncate text-sm text-slate-500">📍 ${esc(p.venue)}</p>
+                  <p class="mt-1 text-sm font-medium text-pink-600">${esc(stLine)}</p>
+                </div>
+                <span aria-hidden="true" class="shrink-0 text-2xl text-slate-300 transition group-hover:translate-x-1 group-hover:text-indigo-500">›</span>
+              </div>
+              <div class="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                <span class="rounded-full bg-indigo-100 px-2 py-0.5 text-indigo-700">✉️ ${k.total} invited</span>
+                <span class="rounded-full bg-emerald-100 px-2 py-0.5 text-emerald-700">${k.accepted} accepted</span>
+                <span class="rounded-full bg-rose-100 px-2 py-0.5 text-rose-700">${k.declined} declined</span>
+                <span class="rounded-full bg-amber-100 px-2 py-0.5 text-amber-700">${k.pending} pending</span>
+                <span class="rounded-full bg-sky-100 px-2 py-0.5 text-sky-700">👥 ${k.people} attending</span>
+              </div>
+              <div class="mt-3 border-t border-slate-100 pt-3 text-sm font-semibold text-indigo-600">${st === 'Closed' ? 'View guests & replies' : 'Manage party & guests'} <span aria-hidden="true" class="inline-block transition group-hover:translate-x-1">→</span></div>
+            </a>`;
+          };
+          const empty = `<div class="card py-12 text-center">
+            <div class="text-5xl">🎈</div>
+            <h2 class="mt-3 text-lg font-semibold">No parties yet</h2>
+            <p class="mt-1 text-sm text-slate-500">Create your first party and start inviting guests.</p>
+            <a href="#/new" class="btn-primary mt-5 inline-block">Create your first party</a>
+          </div>`;
+          const banner = legacy.length ? `<div class="mb-6 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm">
+            <p class="font-semibold text-amber-900">📦 ${legacy.length} party${legacy.length > 1 ? 'ies' : ''} from the older version ${legacy.length > 1 ? 'are' : 'is'} not in your account yet</p>
+            <p class="mt-1 text-amber-800">Move ${legacy.length > 1 ? 'them' : 'it'} into your account once. Guest links already sent keep working.</p>
+            <button id="migrateBtn" class="btn-soft mt-3 !bg-amber-100 !text-amber-900 hover:!bg-amber-200">Move to my account</button></div>` : '';
+          return `${banner}
+          <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+            ${Stat('Active &amp; upcoming parties', c.parties, 'bg-violet-500')}
+            ${Stat('Total invited', c.total, 'bg-indigo-500')}
+            ${Stat('Accepted', c.accepted, 'bg-emerald-500')}
+            ${Stat('Pending', c.pending, 'bg-amber-500')}
+            ${Stat('People attending', c.people, 'bg-sky-500 col-span-2 sm:col-span-1')}
+          </div>
+          <p class="mt-2 text-xs text-slate-400">Summary covers active and upcoming parties only — closed parties are in the Past / Closed tab.</p>
+          ${parties.length ? `
+          <div class="mt-8 flex flex-wrap items-center justify-between gap-3">
+            <div role="tablist" aria-label="Party lists" class="inline-flex rounded-xl bg-slate-100 p-1 text-sm font-medium">
+              <a href="#/dashboard/upcoming" role="tab" aria-selected="${tab === 'upcoming'}" class="rounded-lg px-4 py-1.5 ${tab === 'upcoming' ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'}">Upcoming Parties (${upcoming.length})</a>
+              <a href="#/dashboard/past" role="tab" aria-selected="${tab === 'past'}" class="rounded-lg px-4 py-1.5 ${tab === 'past' ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-600 hover:text-slate-900'}">Past / Closed (${past.length})</a>
+            </div>
+            <a href="#/new" class="btn-primary !py-2 text-sm">+ New Party</a>
+          </div>
+          ${(() => { const list = tab === 'past' ? past : upcoming;
+            return list.length ? `<div class="mt-4 grid gap-4 md:grid-cols-2">${list.map(card).join('')}</div>`
+              : `<div class="card mt-4 py-10 text-center"><div class="text-4xl">${tab === 'past' ? '📭' : '🎈'}</div><p class="mt-2 text-sm text-slate-500">${tab === 'past' ? 'No closed parties yet.' : 'No upcoming parties.'}</p>${tab === 'past' ? '' : '<a href="#/new" class="btn-primary mt-4 inline-block !py-2 text-sm">Create a party</a>'}</div>`; })()}` : `<div class="mt-8">${empty}</div>`}`;
+        },
+        mount() {
+          const btn = $('#migrateBtn'); if (!btn) return;
+          btn.onclick = async () => {
+            btn.disabled = true; btn.textContent = 'Moving…';
+            try { await Repo.legacy.migrate(user.uid, legacy); await loadParties(); toast('Parties moved to your account', 5000); renderMain(true); }
+            catch (e) { console.error(e); btn.disabled = false; btn.textContent = 'Move to my account'; toast('Could not move: ' + e.message, 8000); }
+          };
+        },
+      },
+
+      /* ---------- Party details: guests, invites, actions ---------- */
+      party: {
+        title: (id) => { const p = getParty(id); return p ? partyTitle(p) : 'Party'; },
+        view(id) {
+          const p = getParty(id);
+          const t = turning(p.birth, p.when);
+          return `
+          <a href="#/dashboard" class="text-sm text-indigo-600 hover:underline">← All parties</a>
+          <section class="card mt-3">
+            <div class="flex items-start gap-4">
+              <div class="flex w-24 shrink-0 flex-col gap-2 sm:w-28">
+                <img src="${esc(p.photo || placeholderImg)}" onerror="this.src='${placeholderImg}'" alt="" class="aspect-square w-full rounded-xl object-cover">
+                <a href="#/edit/${p.id}" class="btn-soft whitespace-nowrap text-center !px-2 text-xs">✏️ Edit party</a>
+              </div>
+              <div class="min-w-0 flex-1">
+                <h2 class="text-xl font-extrabold leading-tight">${esc(partyTitle(p))}${t ? `<span class="mt-0.5 block text-base font-bold text-pink-600">turning ${t}</span>` : ''}</h2>
+                <p class="text-sm text-slate-600">📅 ${esc(fmtRange(p.when, p.endWhen))}</p>
+                <p class="text-sm text-slate-600">📍 <a class="text-indigo-600 underline" target="_blank" rel="noopener" href="${esc(mapUrl(p.venue))}">${esc(p.venue)}</a></p>
+                ${p.theme ? `<p class="text-sm text-slate-600">👗 ${esc(p.theme)}</p>` : ''}
+                ${p.rsvpBy ? `<p class="text-sm text-slate-600">⏰ Reply by ${esc(fmtDay(p.rsvpBy))}</p>` : ''}
+                <p class="mt-1 text-sm font-medium text-pink-600">${PartyRules.isClosed(p) ? '🔒 Closed' : esc(countdownText(p.when))}</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card mt-6">
+            <h2 class="mb-4 text-lg font-bold">Invite guests</h2>
+            <form id="inviteForm" class="flex flex-col gap-2 sm:flex-row">
+              <input id="invEmails" type="text" placeholder="guest@email.com (several allowed, separated by commas)" class="flex-1 rounded-lg border border-slate-300 px-3 py-2">
+              <button class="rounded-lg bg-indigo-600 px-5 py-2 font-semibold text-white hover:bg-indigo-700">Send Invite</button>
+            </form>
+            <p id="inviteNote" role="status" class="mt-2 text-xs text-slate-400">&nbsp;</p>
+          </section>
+
+          <div id="dash"></div>`;
+        },
+        mount(id) {
+          const p = getParty(id);
+          renderDash(id);
+          let log = [];                                              // this party's invitation log (the rolling limit counts it)
+          const note = () => {
+            const el = $('#inviteNote'); if (!el) return;
+            const w = PlanRules.invitationWindow(log, myPlan.limits);
+            el.textContent = PlanRules.inviteStatusLine(w); el.className = 'mt-2 text-xs ' + (w.remaining === 0 ? 'font-medium text-rose-600' : 'text-slate-500');
+          };
+          Repo.invitations.list(user.uid, p.id).then(l => { log = l; note(); }).catch(e => { console.warn('invitation log unreadable', e); note(); });
+          $('#inviteForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const guests = gmap[id] || [];
+            const list = [...new Set($('#invEmails').value.split(/[,\s;]+/).map(s => s.trim().toLowerCase()).filter(Boolean))];
+            const bad = list.filter(s => !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s));
+            if (!list.length) return toast('Enter at least one email');
+            if (bad.length) return toast('Invalid email: ' + bad[0]);
+            const existing = new Set(guests.map(g => g.email));
+            const fresh = list.filter(em => !existing.has(em));
+            const dec = PlanRules.inviteDecision(PlanRules.invitationWindow(log, myPlan.limits), fresh.length);
+            if (fresh.length && !dec.allowed) return toast(dec.message, 8000);
+            const batch = fresh.slice(0, dec.allowed);
+            let sent = 0, failed = 0, lastErr = '', stopped = false;
+            for (const email of batch) {
+              let gid;
+              try { gid = await Repo.invitations.add(user.uid, p.id, email); }
+              catch (er) { console.warn('invite not saved', er); stopped = true; toast(er.limit ? 'The server refused this invitation. Make sure the latest rules are published and refresh the page (or the limit was just reached on another device).' : 'Could not save the invite: ' + er.message, 10000); break; }
+              log.push({ email, at: Date.now() });
+              if (inviteReady()) {
+                try { await sendInviteEmail(p, { id: gid, email }); sent++; }
+                catch (err) { console.warn('Invite email failed', err); failed++; lastErr = (err && (err.text || err.message)) || JSON.stringify(err); }
+              }
+            }
+            if (stopped) { note(); return; }
+            $('#invEmails').value = dec.ok ? '' : fresh.slice(dec.allowed).join(', ');          // anything over the limit stays in the box
+            note();
+            if (!fresh.length) toast('Already invited — use the Email button on the guest row to resend', 5000);
+            else if (!dec.ok) toast(dec.message, 9000);
+            else if (!inviteReady()) toast(`Saved, but invite emails are OFF (EmailJS not configured). Use Copy Link.`, 10000);
+            else if (failed) toast(`Email FAILED (${failed}): ${lastErr}`, 15000);
+            else toast(`${sent} invite email${sent > 1 ? 's' : ''} sent via EmailJS`, 6000);
+          });
+        },
+      },
+
+      /* ---------- Create / Edit party: form + live preview ---------- */
+      new:  { title: () => 'Create party',
+              view() { const c = createCheck();
+                return c.ok ? partyForm(null) : `<section class="card py-10 text-center"><div class="text-5xl">🚧</div><h2 class="mt-3 text-lg font-semibold">Party limit reached</h2><p class="mx-auto mt-1 max-w-md text-sm text-slate-500">${esc(c.message)}</p><a href="#/dashboard" class="btn-line mt-5 inline-block">Back to dashboard</a></section>`; },
+              mount() { if (createCheck().ok) mountForm(null); } },
+      edit: { title: (id) => { const p = getParty(id); return p ? 'Edit ' + partyTitle(p) : 'Edit party'; }, view: (id) => partyForm(getParty(id)), mount: (id) => mountForm(getParty(id)) },
+
+      /* ---------- Admin (admins only — guarded in renderMain, and by Firestore rules) ---------- */
+      admin: adminScreens,
+
+      /* ---------- Settings ---------- */
+      settings: {
+        title: () => 'Settings',
+        view() {
+          return `
+          <section class="card">
+            <h2 class="text-lg font-semibold">Account</h2>
+            <p class="mt-1 text-sm text-slate-500">Signed in as <b>${esc(user.displayName || '')}</b> (${esc(user.email || '')}). Your parties are private to this Google account.</p>
+            <button type="button" data-action="signout" class="btn-line mt-4">Sign out</button>
+          </section>
+          <section class="card mt-6">
+            <h2 class="text-lg font-semibold">Your plan: ${esc(myPlan.planName)}</h2>
+            ${isAdminUser ? '<p class="mt-1 text-sm text-violet-700">Admins are exempt from plan limits.</p>' : ''}
+            <dl class="mt-3 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">${PlanRules.LIMIT_FIELDS.map(f => `<div class="flex justify-between border-b border-slate-100 py-1"><dt class="text-slate-500">${esc(f.label)}</dt><dd class="font-medium">${myPlan.limits[f.key] == null ? 'Unlimited' : myPlan.limits[f.key]}</dd></div>`).join('')}</dl>
+            ${isAdminUser ? '' : `<p class="mt-3 text-sm text-slate-500">Price: <b>${(() => { const p = PlanRules.priceOf(plansList.find(x => x.id === myPlan.planId)); return p ? '$' + p.toFixed(2) + ' / month' : 'Free'; })()}</b> · Parties created: <b>${createdCount()}</b>${myPlan.limits.maxParties == null ? ' (no limit)' : ' of ' + myPlan.limits.maxParties}.</p>
+            <p class="mt-1 text-sm text-slate-500">Upgrades to Pro Host and VIP are coming soon. Plans can only be upgraded, never lowered, by hosts.</p>`}
+            <p class="mt-3 text-sm text-slate-500">Deleting parties: <b>${myPlan.canDeleteParties ? 'allowed' : 'VIP only'}</b> · Exporting guest lists: <b>${myPlan.canExportGuests ? 'allowed' : 'VIP only'}</b>.</p>
+            <p class="mt-3 text-sm text-slate-500">Email invitations: <b>${myPlan.limits.maxEmailsPerParty == null ? 'unlimited' : myPlan.limits.maxEmailsPerParty + ' per party every ' + myPlan.limits.cooldownHours + ' h'}</b>.</p>
+          </section>
+          <section class="card mt-6">
+            <h2 class="text-lg font-semibold">Email</h2>
+            <p class="mt-1 text-sm text-slate-500">Invites and reminders are currently sent through EmailJS. RSVP alerts go to <b>${esc(HOST_EMAIL)}</b>.</p>
+            <p class="mt-2 text-sm text-slate-400">Coming later: connect your own Gmail so invites come from your address.</p>
+          </section>`;
+        },
+      },
+    };
+
+    const Err = (id) => `<p id="e_${id}" role="alert" class="mt-1 hidden text-xs font-medium text-rose-600"></p>`;
+
+    /* ---------- Party form (HTML) ---------- */
+    function partyForm(p) {
+      photoData = p?.photo || '';
+      return `
+      <div class="grid gap-6 lg:grid-cols-2">
+        <section class="card">
+          <h2 class="mb-4 text-lg font-bold">${p ? 'Edit party details' : 'Party details'}</h2>
+          <form id="partyForm" class="space-y-3" novalidate>
+            <div>
+              <label for="photoUrl" class="text-sm font-medium">Party cover photo <span class="font-normal text-slate-400">(optional — upload or paste image URL)</span></label>
+              <div class="mt-1 flex gap-2">
+                <input id="photoUrl" type="url" placeholder="https://…" value="${p && !(p.photo || '').startsWith('data:') ? esc(p.photo) : ''}" class="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm">
+                <label class="cursor-pointer whitespace-nowrap rounded-lg bg-indigo-50 px-3 py-2 text-sm text-indigo-700 hover:bg-indigo-100">Upload<input id="photoFile" type="file" accept="image/*" class="hidden"></label>
+              </div>
+              <img id="photoPrev" src="${esc(photoData || placeholderImg)}" onerror="this.src='${placeholderImg}'" class="mt-2 h-32 w-32 rounded-xl border object-cover" alt="preview">
+            </div>
+            <div><label for="fName" class="text-sm font-medium">Party title / name <span class="text-rose-500">*</span> <span class="font-normal text-slate-400">(shown as “Name’s Birthday”)</span></label><input id="fName" required maxlength="80" value="${esc(p?.name)}" class="field">${Err('fName')}</div>
+            <div><label for="fBirth" class="text-sm font-medium">Birth month &amp; year <span class="text-rose-500">*</span> <span class="font-normal text-slate-400">(for “Turning N”)</span></label><input id="fBirth" type="month" required value="${esc(p?.birth)}" class="field">${Err('fBirth')}</div>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div><label for="fWhen" class="text-sm font-medium">Party start date &amp; time <span class="text-rose-500">*</span></label><input id="fWhen" type="datetime-local" required value="${esc(p?.when)}" class="field">${Err('fWhen')}</div>
+              <div><label for="fEnd" class="text-sm font-medium">Party end date &amp; time <span class="font-normal text-slate-400">(optional)</span></label><input id="fEnd" type="datetime-local" value="${esc(p?.endWhen)}" class="field">${Err('fEnd')}</div>
+            </div>
+            <div><label for="fVenue" class="text-sm font-medium">Venue / address <span class="text-rose-500">*</span></label><input id="fVenue" required value="${esc(p?.venue)}" class="field">${Err('fVenue')}</div>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div><label for="fTheme" class="text-sm font-medium">Dress code / theme <span class="font-normal text-slate-400">(optional)</span></label><input id="fTheme" maxlength="80" placeholder="e.g. Princess, Pool party" value="${esc(p?.theme)}" class="field"></div>
+              <div><label for="fRsvp" class="text-sm font-medium">RSVP deadline <span class="font-normal text-slate-400">(optional)</span></label><input id="fRsvp" type="date" value="${esc(p?.rsvpBy)}" class="field">${Err('fRsvp')}</div>
+            </div>
+            <div><label for="fPhone" class="text-sm font-medium">Host phone number <span class="font-normal text-slate-400">(optional)</span></label><input id="fPhone" type="tel" maxlength="30" placeholder="e.g. (555) 123-4567" value="${esc(p?.phone)}" class="field"></div>
+            <div><label for="fNote" class="text-sm font-medium">Message from host <span class="font-normal text-slate-400">(optional)</span></label><textarea id="fNote" rows="2" maxlength="300" placeholder="e.g. Ready to party! Cake at 5pm 🎂" class="field">${esc(p?.note)}</textarea></div>
+            <div class="flex gap-2">
+              <a href="${p ? '#/party/' + p.id : '#/dashboard'}" class="btn-line flex items-center">Cancel</a>
+              <button id="saveBtn" class="btn-primary flex-1">${p ? 'Save changes' : 'Create party'}</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="card overflow-hidden !p-0 self-start">
+          <div class="h-2 bg-gradient-to-r from-pink-400 via-amber-300 to-indigo-400"></div>
+          <div class="p-5 text-center">
+            <p class="mb-2 text-xs uppercase tracking-widest text-slate-400">Live Invitation Preview</p>
+            <img id="cardImg" src="${esc(photoData || placeholderImg)}" onerror="this.src='${placeholderImg}'" class="mx-auto h-40 w-40 rounded-full border-4 border-pink-200 object-cover shadow" alt="">
+            <h3 id="cardName" class="mt-3 text-2xl font-extrabold">${p ? esc(p.name) + "'s Birthday" : 'Your party name'}</h3>
+            <div id="cardTurning" class="mt-1 inline-block rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-4 py-1 font-bold text-white ${p && turning(p.birth, p.when) ? '' : 'hidden'}">${p && turning(p.birth, p.when) ? '🎈 Turning ' + turning(p.birth, p.when) + '!' : ''}</div>
+            <p id="cardBirth" class="text-sm text-slate-500">${p ? 'Born ' + esc(fmtBirth(p.birth)) : ''}</p>
+            <p id="cardWhen" class="mt-2 text-sm">${p ? '📅 ' + esc(fmtRange(p.when, p.endWhen)) : ''}</p>
+            <p id="cardVenue" class="text-sm">${p ? '📍 ' + esc(p.venue) : ''}</p>
+            <p id="cardTheme" class="text-sm">${p && p.theme ? '👗 ' + esc(p.theme) : ''}</p>
+            <p id="cardRsvp" class="text-sm">${p && p.rsvpBy ? '⏰ Reply by ' + esc(fmtDay(p.rsvpBy)) : ''}</p>
+            <p id="cardPhone" class="text-sm">${p && p.phone ? '📞 ' + esc(p.phone) : ''}</p>
+            <p id="cardCountdown" class="mt-2 text-sm font-semibold text-pink-600">${p ? esc(countdownText(p.when)) : ''}</p>
+            <p id="cardNote" class="mt-2 whitespace-pre-line text-sm italic text-slate-600">${p && p.note ? '💌 ' + esc(p.note) : ''}</p>
+          </div>
+        </section>
+      </div>`;
+    }
+
+    function mountForm(p) {
+      const touched = new Set();
+      // UI <-> rules mapping: input id -> party field key. All rules live in PartyRules.
+      const FIELDS = { fName: 'name', fBirth: 'birth', fWhen: 'when', fEnd: 'endWhen', fVenue: 'venue', fRsvp: 'rsvpBy' };
+      const readValues = () => Object.fromEntries(Object.entries(FIELDS).map(([id, key]) => [key, $('#' + id).value]));
+      const showErr = (id, msg) => {
+        const el = $('#' + id), box = $('#e_' + id);
+        box.textContent = msg; box.classList.toggle('hidden', !msg);
+        el.classList.toggle('!border-rose-500', !!msg); el.setAttribute('aria-invalid', msg ? 'true' : 'false'); el.setAttribute('aria-describedby', 'e_' + id);
+      };
+      // Errors show for fields the user has touched, any non-empty bad value, or everything on submit. Returns first invalid input id.
+      const validate = (all = false) => {
+        const values = readValues(), ctx = { original: p };
+        const res = PartyRules.validateParty(values, ctx);
+        Object.entries(FIELDS).forEach(([id, key]) => {
+          const msg = res.errors[key] || '';
+          showErr(id, msg && (all || touched.has(id) || values[key]) ? msg : '');
+        });
+        const lim = PartyRules.pickerLimits(values, ctx);
+        $('#fWhen').min = lim.startMin; $('#fEnd').min = lim.endMin; $('#fRsvp').max = lim.rsvpMax;
+        return res.firstInvalid ? Object.keys(FIELDS).find((id) => FIELDS[id] === res.firstInvalid) : null;
+      };
+      Object.keys(FIELDS).forEach((id) => ['input', 'change', 'blur'].forEach((ev) => $('#' + id).addEventListener(ev, () => { touched.add(id); validate(); })));
+      validate();
+      const setPrev = (src) => { photoData = src; $('#photoPrev').src = src || placeholderImg; live(); };
+      const live = () => {
+        $('#cardName').textContent = $('#fName').value ? $('#fName').value + "'s Birthday" : 'Your party name';
+        $('#cardBirth').textContent = $('#fBirth').value ? 'Born ' + fmtBirth($('#fBirth').value) : '';
+        const tn = turning($('#fBirth').value, $('#fWhen').value);
+        $('#cardTurning').textContent = tn ? '🎈 Turning ' + tn + '!' : '';
+        $('#cardTurning').classList.toggle('hidden', !tn);
+        $('#cardWhen').textContent = $('#fWhen').value ? '📅 ' + fmtRange($('#fWhen').value, $('#fEnd').value) : '';
+        $('#cardTheme').textContent = $('#fTheme').value.trim() ? '👗 ' + $('#fTheme').value.trim() : '';
+        $('#cardRsvp').textContent = $('#fRsvp').value ? '⏰ Reply by ' + fmtDay($('#fRsvp').value) : '';
+        $('#cardPhone').textContent = $('#fPhone').value.trim() ? '📞 ' + $('#fPhone').value.trim() : '';
+        $('#cardVenue').textContent = $('#fVenue').value ? '📍 ' + $('#fVenue').value : '';
+        $('#cardCountdown').textContent = $('#fWhen').value ? countdownText($('#fWhen').value) : '';
+        $('#cardNote').textContent = $('#fNote').value.trim() ? '💌 ' + $('#fNote').value.trim() : '';
+        $('#cardImg').src = photoData || placeholderImg;
+      };
+      ['fName', 'fBirth', 'fWhen', 'fEnd', 'fVenue', 'fTheme', 'fRsvp', 'fPhone', 'fNote'].forEach(id => $('#' + id).addEventListener('input', live));
+      $('#photoUrl').addEventListener('input', e => setPrev(e.target.value.trim()));
+      $('#photoFile').addEventListener('change', e => {
+        const input = e.target;
+        const f = input.files && input.files[0];
+        input.value = '';            // lets you pick the same file again and still get a change event
+        if (!f) return;
+        const img = new Image(), url = URL.createObjectURL(f);
+        img.onload = () => {
+          try {
+            // Shrink until the photo fits the plan's size limit.
+            const maxKB = myPlan.limits.maxPhotoKB, maxBytes = maxKB * 1024;
+            let max = 600, q = 0.75, out = '';
+            for (let i = 0; i < 10; i++) {
+              const r = Math.min(1, max / Math.max(img.width, img.height));
+              const cv = document.createElement('canvas'); cv.width = Math.max(1, Math.round(img.width * r)); cv.height = Math.max(1, Math.round(img.height * r));
+              cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+              out = cv.toDataURL('image/jpeg', q);
+              if (PlanRules.dataUrlBytes(out) <= maxBytes) break;
+              if (q > 0.45) q -= 0.15; else max = Math.round(max * 0.8);
+            }
+            if (PlanRules.dataUrlBytes(out) > maxBytes) toast(`That photo is too large for your plan (max ${maxKB} KB). Try a smaller image.`, 6000);
+            else { $('#photoUrl').value = ''; setPrev(out); toast('Photo added'); }
+          } catch (err) { console.error(err); toast('Could not process that photo. Try a JPG or PNG.', 6000); }
+          URL.revokeObjectURL(url);
+        };
+        img.onerror = () => { URL.revokeObjectURL(url); toast('That photo format isn\'t supported (HEIC?). Try a JPG or PNG.', 6000); };
+        img.src = url;
+      });
+
+      $('#partyForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = { name: $('#fName').value.trim(), birth: $('#fBirth').value, when: $('#fWhen').value, endWhen: $('#fEnd').value, venue: $('#fVenue').value.trim(),
+          theme: $('#fTheme').value.trim(), rsvpBy: $('#fRsvp').value, phone: $('#fPhone').value.trim(), note: $('#fNote').value.trim(), photo: photoData || '', maxPeople: myPlan.limits.maxPeoplePerRsvp };
+        const bad = validate(true);
+        if (bad) { $('#' + bad).focus(); return toast('Please fix the highlighted fields', 4000); }
+        if (!p) { const c = createCheck(); if (!c.ok) return toast(c.message, 9000); }
+        const btn = $('#saveBtn'); btn.disabled = true;
+        try {
+          let id;
+          if (p) { await Repo.parties.update(user.uid, p.id, data); id = p.id; }
+          else id = await Repo.parties.create(user.uid, data);
+          await loadParties();
+          toast('Event saved');
+          location.hash = '#/party/' + id;
+        } catch (err) { console.error(err); btn.disabled = false; toast(err.limit ? 'The server refused this party. Make sure the latest rules are published and refresh the page.' : 'Could not save: ' + err.message, 9000); }
+      });
+    }
+
+    /* ---------- Party guest table + actions (live, re-rendered on each snapshot) ---------- */
+    function renderDash(id) {
+      const box = $('#dash'); if (!box) return;
+      const current = getParty(id); if (!current) return;
+      const guests = gmap[id] || [];
+      const c = PartyRules.tally(guests);
+      const delChk = PlanRules.canUserDeleteParty(myPlan, { isAdmin: isAdminUser }), expChk = PlanRules.canUserExportGuestList(myPlan, { isAdmin: isAdminUser });
+      box.innerHTML = `
+      <section class="mt-6">
+        <h2 class="mb-3 text-lg font-bold">Replies <span class="text-xs font-normal text-emerald-600">● live</span></h2>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-5">
+          ${Stat('Total invited', c.total, 'bg-indigo-500')}${Stat('Accepted', c.accepted, 'bg-emerald-500')}${Stat('Declined', c.declined, 'bg-rose-500')}${Stat('Pending', c.pending, 'bg-amber-500')}${Stat('People attending', c.people, 'bg-sky-500 col-span-2 sm:col-span-1')}
+        </div>
+        <ul class="mt-4 space-y-2">
+          ${guests.length ? guests.map(g => `
+          <li class="rounded-2xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="min-w-0 flex-1 truncate font-medium" title="${esc(g.email)}">${esc(g.email)}</span>
+              <span class="shrink-0">${badge(g.status)}</span>
+              <span class="max-w-[28%] shrink-0 truncate text-slate-600" title="${esc(g.name)}">${esc(g.name) || '<span class="text-slate-300">—</span>'}</span>
+              <span class="shrink-0 text-slate-600" title="Guests in their party">${g.status === 'accepted' ? '👥 ' + (g.count || 1) : '<span class="text-slate-300">—</span>'}</span>
+            </div>
+            <div class="mt-2 flex flex-wrap justify-end gap-1 text-sm">
+              <button data-mail="${g.id}" class="rounded bg-indigo-50 px-2 py-1 text-indigo-700 hover:bg-indigo-100">Email</button>
+              <button data-copy="${g.id}" class="rounded bg-slate-100 px-2 py-1 hover:bg-slate-200">Copy Link</button>
+              <button data-wa="${g.id}" class="rounded bg-green-500 px-2 py-1 text-white hover:bg-green-600">WhatsApp</button>
+              <button data-del="${g.id}" class="rounded bg-rose-50 px-2 py-1 text-rose-600 hover:bg-rose-100">Delete</button>
+            </div>
+          </li>`).join('') : `<li class="rounded-2xl bg-white p-6 text-center text-sm text-slate-400 shadow-sm">No invitees yet.</li>`}
+        </ul>
+        <div class="mt-3 flex flex-wrap justify-end gap-2">
+          ${expChk.ok ? '<button id="exportCsv" class="rounded-lg bg-slate-100 px-3 py-1.5 text-sm hover:bg-slate-200">⬇️ Export guest list</button>'
+            : '<button id="exportCsv" disabled aria-describedby="lockNote" title="VIP feature" class="cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm text-slate-400">⬇️ Export guest list</button>'}
+          <button id="remindBtn" ${c.pending ? '' : 'disabled'} class="rounded-lg bg-indigo-50 px-3 py-1.5 text-sm text-indigo-700 hover:bg-indigo-100 ${c.pending ? '' : 'cursor-not-allowed opacity-50'}">🔔 Remind pending (${c.pending})</button>
+          <button id="resetRsvps" class="btn-line">Reset all RSVPs</button>
+          ${delChk.ok ? '<button id="deleteParty" class="rounded-lg border border-rose-300 px-3 py-1.5 text-sm text-rose-600 hover:bg-rose-50">Delete event</button>'
+            : '<button id="deleteParty" disabled aria-describedby="lockNote" class="cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm text-slate-400">Delete event</button>'}
+        </div>
+        ${delChk.ok && expChk.ok ? '' : `<div id="lockNote" class="mt-2 space-y-0.5 text-right text-xs text-slate-500">${[expChk, delChk].filter(x => !x.ok).map(x => `<p>🔒 ${esc(x.message)}</p>`).join('')}</div>`}
+      </section>`;
+      const byId = (gid) => guests.find(g => g.id === gid);
+      box.querySelectorAll('[data-mail]').forEach(b => b.onclick = async () => {
+        if (!inviteReady()) return toast('Add your invite template ID first');
+        try { await sendInviteEmail(current, byId(b.dataset.mail)); toast('Invite emailed'); }
+        catch (e) { toast('Email failed: ' + (e.text || e.message || 'unknown error')); }
+      });
+      box.querySelectorAll('[data-copy]').forEach(b => b.onclick = () => copy(guestLink(current, byId(b.dataset.copy))));
+      box.querySelectorAll('[data-wa]').forEach(b => b.onclick = () => {
+        const msg = `🎉 You're invited to ${current.name}'s birthday! Please RSVP here: ${guestLink(current, byId(b.dataset.wa))}`;
+        window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      });
+      box.querySelectorAll('[data-del]').forEach(b => b.onclick = async () => {
+        const g = byId(b.dataset.del);
+        if (confirm('Delete invite for ' + g.email + '?')) await Repo.guests.remove(user.uid, current.id, g.id);
+      });
+      $('#exportCsv').onclick = () => {
+        const xc = PlanRules.canUserExportGuestList(myPlan, { isAdmin: isAdminUser }); if (!xc.ok) return toast(xc.message, 6000);   // re-check at click time
+        if (!guests.length) return toast('No guests to export yet');
+        // Guest-typed names starting with = + - @ get a leading apostrophe so spreadsheets don't run them as formulas.
+        const cell = (v) => { let x = String(v ?? ''); if (/^[=+\-@\t\r]/.test(x)) x = "'" + x; return '"' + x.replace(/"/g, '""') + '"'; };
+        const rows = [['Email', 'Status', 'Full name', 'Guests', 'Replied at']].concat(guests.map(g => [
+          g.email, g.status, g.name || '', g.status === 'accepted' ? (g.count || 1) : 0,
+          g.respondedAt && g.respondedAt.toDate ? g.respondedAt.toDate().toLocaleString() : ''
+        ]));
+        const csv = '﻿' + rows.map(r => r.map(cell).join(',')).join('\r\n');
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+        a.download = 'guest-list-' + (current.name || 'party').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.csv';
+        document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+        toast('Guest list downloaded');
+      };
+      $('#remindBtn').onclick = async () => {
+        if (!inviteReady()) return toast('Email is not set up yet');
+        const pend = guests.filter(g => g.status === 'pending');
+        if (!pend.length) return toast('Nobody is pending 🎉');
+        const wait = PlanRules.reminderWait(myPlan.limits, current.lastReminderAt, Date.now()); if (!wait.ok) return toast(wait.message, 7000);
+        if (!confirm(`Email a reminder to ${pend.length} guest${pend.length > 1 ? 's' : ''} who haven't replied yet?`)) return;
+        toast('Sending reminders…', 30000);
+        let sent = 0, failed = 0, lastErr = '';
+        for (const g of pend) {
+          try { await sendInviteEmail(current, g, true); sent++; }
+          catch (err) { failed++; lastErr = (err && (err.text || err.message)) || JSON.stringify(err); }
+        }
+        if (sent) { const ts = Date.now(); current.lastReminderAt = ts; try { await Repo.parties.update(user.uid, current.id, { lastReminderAt: ts }); } catch (e) { console.warn(e); } }
+        if (failed) toast(`Reminders: ${sent} sent, ${failed} FAILED (${lastErr})`, 15000);
+        else toast(`${sent} reminder${sent > 1 ? 's' : ''} sent`, 6000);
+      };
+      $('#resetRsvps').onclick = async () => {
+        if (!confirm(`Reset every guest of "${partyTitle(current)}" back to Pending?`)) return;
+        await Repo.guests.resetAll(user.uid, current.id, guests.map(g => g.id)); toast('All RSVPs reset');
+      };
+      $('#deleteParty').onclick = async () => {
+        const chk = PlanRules.canUserDeleteParty(myPlan, { isAdmin: isAdminUser });   // re-check at click time
+        if (!chk.ok) return toast(chk.message, 6000);
+        const pname = partyTitle(current);
+        if (!confirm(`Delete "${pname}" and all ${guests.length} invite${guests.length === 1 ? '' : 's'}?\n\nThis cannot be undone.`)) return;
+        try {
+          await Repo.parties.remove(user.uid, current.id, guests.map(g => g.id));
+          await loadParties();
+          location.hash = '#/dashboard';
+          toast(`"${pname}" deleted`, 5000);
+        } catch (err) { console.error(err); toast('Could not delete: ' + err.message); }
+      };
+    }
+
+    /* ---------- Render: state -> DOM ---------- */
+    let shownKey = null;
+    function renderChrome(name) {
+      shell.dataset.open = ui.isOpen;
+      shell.dataset.collapsed = ui.isCollapsed;
+      menuBtn.setAttribute('aria-expanded', ui.isOpen);
+      const label = ui.isCollapsed ? 'Expand sidebar' : 'Collapse sidebar';
+      collapseBtn.setAttribute('aria-label', label); collapseBtn.title = label;
+      collapseBtn.setAttribute('aria-expanded', !ui.isCollapsed);
+      sidebar.inert = isMobile.matches && !ui.isOpen;           // closed drawer is unreachable by keyboard / screen reader
+      document.body.classList.toggle('overflow-hidden', ui.isOpen && isMobile.matches);
+      nav.querySelectorAll('.nav-link').forEach(a => {
+        if (a.dataset.nav === NAV_FOR[name]) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+      });
+    }
+    function renderMain(force = false) {
+      if (!user || shell.hidden) return;
+      let { name, id } = parseRoute();
+      if (name === 'admin' && !isAdminUser) { location.hash = '#/dashboard'; return; }      // UI guard; the real protection is in firestore.rules
+      if ((name === 'party' || name === 'edit') && !getParty(id)) {      // unknown / deleted party
+        if (location.hash !== '#/dashboard') { location.hash = '#/dashboard'; return; }
+        name = 'dashboard';
+      }
+      renderChrome(name);
+      const key = name + '/' + id;
+      if (!force && key === shownKey) return;
+      shownKey = key;
+      const r = ROUTES[name];
+      main.innerHTML = r.view(id);
+      r.mount?.(id);
+      pageTitle.textContent = r.title(id);
+      document.title = `${r.title(id)} · ${APP_NAME}`;
+    }
+    const renderAll = () => renderMain(true);
+
+    // Live guest updates: refresh only what is safe (never the forms, so typing is not lost).
+    function onGuestsChanged(pid) {
+      if (shell.hidden) return;
+      const { name, id } = parseRoute();
+      if (name === 'dashboard') renderMain(true);
+      else if (name === 'party' && id === pid) renderDash(pid);
+    }
+
+    /* ---------- Events ---------- */
+    const actions = {
+      open()     { ui.isOpen = true; renderChrome(parseRoute().name); sidebar.querySelector('.nav-link').focus(); },
+      close()    { ui.isOpen = false; renderChrome(parseRoute().name); },
+      collapse() { ui.isCollapsed = !ui.isCollapsed; store.set(ui.isCollapsed); renderChrome(parseRoute().name); },
+      signout()  { ui.isOpen = false; Repo.auth.signOut(); },
+    };
+    document.addEventListener('click', (e) => {
+      const el = e.target.closest('[data-action]');
+      if (el && !shell.hidden) actions[el.dataset.action]?.();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && ui.isOpen) { actions.close(); menuBtn.focus(); }
+    });
+    addEventListener('hashchange', () => { ui.isOpen = false; renderMain(); main.focus({ preventScroll: true }); window.scrollTo(0, 0); });
+    // Parties close on their own as time passes: re-render the dashboard when any party's status changes.
+    let statusSig = '';
+    setInterval(() => {
+      const sig = parties.map(p => p.id + PartyRules.getEventStatus(p)).join();
+      if (statusSig && sig !== statusSig && !shell.hidden && parseRoute().name === 'dashboard') renderMain(true);
+      statusSig = sig;
+    }, 20000);
+    isMobile.addEventListener('change', () => { ui.isOpen = false; renderChrome(parseRoute().name); });
+  }
+}
+</script>
+</body>
+</html>
