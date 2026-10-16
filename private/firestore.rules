@@ -1,6 +1,6 @@
 // ============================================================
-// Birthday Bash — Firestore rules · Version v27 · 2026-10-15 00:40 CDT
-// (matches index.html v27)
+// Birthday Bash — Firestore rules · Version v31 · 2026-10-15 21:41 CDT
+// (matches index.html v31)
 // ============================================================
 rules_version = '2';
 service cloud.firestore {
@@ -42,9 +42,32 @@ service cloud.firestore {
       allow list: if isAdmin();
       allow write: if isSuperAdmin() && email != superAdminEmail();   // only the Super Admin adds/removes admins
     }
+    // Plans: everyone signed in reads them (hosts read their plan's limits); ONLY the Super Admin creates / edits / deletes them.
+    function validPlan(d) {
+      return d.name is string && d.name.size() > 0 && d.name.size() <= 60
+        && d.get('description', '') is string && d.get('description', '').size() <= 200
+        && d.get('price', 0) is number && d.get('price', 0) >= 0 && d.get('price', 0) <= 10000
+        && d.get('anchorPrice', 0) is number && d.get('anchorPrice', 0) >= 0 && d.get('anchorPrice', 0) <= 10000
+        && d.get('validityUnit', 'MONTHS') in ['MONTHS', 'YEARS']
+        && d.get('validityValue', 1) is int && d.get('validityValue', 1) >= 1 && d.get('validityValue', 1) <= 120
+        && d.get('baseParties', 0) is int && d.get('baseParties', 0) >= 0 && d.get('baseParties', 0) <= 1000
+        && d.get('bonusParties', 0) is int && d.get('bonusParties', 0) >= 0 && d.get('bonusParties', 0) <= 1000
+        && d.get('features', {}) is map;
+    }
     match /plans/{planId} {
-      allow read: if signedIn();                  // hosts read their plan's limits
-      allow write: if isAdmin();
+      allow read: if signedIn();
+      allow create, update: if isSuperAdmin() && validPlan(request.resource.data);
+      allow delete: if isSuperAdmin();
+    }
+    // Plan change history: one create-only entry per change (who, when, what). Never edited, never deleted.
+    match /planAudit/{id} {
+      allow read: if isSuperAdmin();
+      allow create: if isSuperAdmin()
+        && request.resource.data.keys().hasOnly(['planId', 'planName', 'action', 'by', 'at', 'changes'])
+        && request.resource.data.action in ['create', 'update', 'delete', 'seed', 'default']
+        && request.resource.data.by == verifiedEmail()
+        && request.resource.data.at == request.time;
+      allow update, delete: if false;
     }
     match /discounts/{code} {
       allow get: if request.auth != null;           // a signed-in user can check one exact code (codes can't be listed)
@@ -77,30 +100,47 @@ service cloud.firestore {
       return hostPlanId(uid) != '' && exists(/databases/$(database)/documents/plans/$(hostPlanId(uid)))
         ? get(/databases/$(database)/documents/plans/$(hostPlanId(uid))).data : {};
     }
+    // A feature switch on the host's plan (plans/{id}.features.<key>), e.g. 'deleteEvent', 'deleteInvites'.
+    function planFeature(uid, key) { return planDoc(uid).get('features', {}).get(key, false) == true; }
     function planAllowsDelete(uid) {
-      return exists(/databases/$(database)/documents/users/$(uid)) && planDoc(uid).get('canDeleteParties', false) == true;
+      return exists(/databases/$(database)/documents/users/$(uid)) && planFeature(uid, 'deleteEvent');
+    }
+    // Total party slots = base + bonus (an empty database with no plan at all keeps a small default of 10).
+    function partyTotal(uid) {
+      return planDoc(uid).size() == 0 ? 10 : planDoc(uid).get('baseParties', 0) + planDoc(uid).get('bonusParties', 0);
     }
 
-    // ----- Email invitations: entry n of a party's log is allowed only if entry n-max is older than the cooling period -----
-    // (max = plan "maxEmailsPerParty", null = unlimited; period = plan "cooldownHours"). Entries can never be edited or deleted.
-    function inviteLimits(uid) { return planDoc(uid).get('limits', {}); }
-    function inviteWindowOk(uid, pid, k) {
-      return inviteLimits(uid).get('maxEmailsPerParty', 10) == null
-        || k < inviteLimits(uid).get('maxEmailsPerParty', 10)
-        || get(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(k - inviteLimits(uid).get('maxEmailsPerParty', 10)))).data.createdAt
-             < request.time - duration.value(inviteLimits(uid).get('cooldownHours', 24), 'h');
+    // ----- Pass validity: the host's current subscription (admin-assigned, else the self-service free one) may carry expiresAt -----
+    // An expired pass stops NEW parties and NEW invitations. Existing parties and guest replies keep working.
+    function currentSub(uid) {
+      let u = get(/databases/$(database)/documents/users/$(uid)).data;
+      return u.get('currentSubscriptionId', '') != ''
+          && exists(/databases/$(database)/documents/users/$(uid)/subscriptions/$(u.currentSubscriptionId))
+        ? get(/databases/$(database)/documents/users/$(uid)/subscriptions/$(u.currentSubscriptionId)).data
+        : (exists(/databases/$(database)/documents/users/$(uid)/subscriptions/free-signup)
+            ? get(/databases/$(database)/documents/users/$(uid)/subscriptions/free-signup).data : {});
     }
+    function passLive(uid) { return !('expiresAt' in currentSub(uid)) || currentSub(uid).expiresAt > request.time; }
+    // Longest a self-service pass may run (months counted as 31 days, years as 366, plus 3 days of clock slack).
+    function maxPassDays(planId) {
+      let p = get(/databases/$(database)/documents/plans/$(planId)).data;
+      return p.get('validityUnit', 'MONTHS') == 'YEARS' ? p.get('validityValue', 1) * 366 + 3 : p.get('validityValue', 1) * 31 + 3;
+    }
+
+    // ----- Email invitations: entry n of a party's log is allowed only while n < the plan's "maxEmailsPerParty" (null = unlimited) -----
+    // Entries can never be edited or deleted, so deleting a guest never frees a slot.
+    function inviteLimits(uid) { return planDoc(uid).get('limits', {}); }
     function inviteAllowed(uid, pid, n) {
       return n.matches('[0-9]+')
         && (int(n) == 0 || exists(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(int(n) - 1))))
-        && (isAdmin() || inviteWindowOk(uid, pid, int(n)));
+        && (isAdmin() || (passLive(uid)
+            && (inviteLimits(uid).get('maxEmailsPerParty', 10) == null || int(n) < inviteLimits(uid).get('maxEmailsPerParty', 10))));
     }
-    // ----- Lifetime party limit: log entry n is allowed only while n < the plan's total-party limit (null = unlimited) -----
+    // ----- Lifetime party limit: log entry n is allowed only while n < the plan's total (base + bonus parties), and the pass is live -----
     function partyLogAllowed(uid, n) {
       return n.matches('[0-9]+')
         && (int(n) == 0 || exists(/databases/$(database)/documents/users/$(uid)/partyLog/$(string(int(n) - 1))))
-        && (isAdmin() || planDoc(uid).get('limits', {}).get('maxParties', 10) == null
-            || int(n) < planDoc(uid).get('limits', {}).get('maxParties', 10));
+        && (isAdmin() || (passLive(uid) && int(n) < partyTotal(uid)));
     }
     // A party still in the old top-level collection (not yet moved) may have its guests copied over without an invitation entry.
     function legacyUnmoved(pid) {
@@ -118,7 +158,9 @@ service cloud.firestore {
         allow create: if (isUser(uid) && sid == 'free-signup'
                           && request.resource.data.status == 'active'
                           && request.resource.data.get('source', '') == 'self'
-                          && get(/databases/$(database)/documents/plans/$(request.resource.data.planId)).data.get('price', 0) == 0)
+                          && get(/databases/$(database)/documents/plans/$(request.resource.data.planId)).data.get('price', 0) == 0
+                          && request.resource.data.expiresAt is timestamp
+                          && request.resource.data.expiresAt <= request.time + duration.value(maxPassDays(request.resource.data.planId), 'd'))
                       || isAdmin();
         allow update, delete: if isAdmin();
       }
@@ -147,13 +189,15 @@ service cloud.firestore {
              && getAfter(/databases/$(database)/documents/users/$(uid)/partyLog/$(string(request.resource.data.logSeq))).data.partyId == pid)
             || legacyUnmoved(pid));
         allow update: if isUser(uid);
-        // Deleting a party: admins, or hosts whose plan has "canDeleteParties" (VIP). Everyone else is refused.
+        // Deleting a party: admins, or hosts whose plan has the "deleteEvent" feature. Everyone else is refused.
         allow delete: if isUser(uid) && (isAdmin() || planAllowsDelete(uid));
 
         // Every guest is created together with its numbered invitation-log entry (written in the same batch).
         match /guests/{gid} {
           allow get: if true;                     // gid is an unguessable id that lives only in the guest's link
-          allow list, delete: if isUser(uid);
+          allow list: if isUser(uid);
+          allow delete: if isUser(uid) && (isAdmin() || planFeature(uid, 'deleteInvites')
+              || !existsAfter(/databases/$(database)/documents/users/$(uid)/parties/$(pid)));
           allow create: if isUser(uid) && (
               (existsAfter(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(request.resource.data.inviteSeq)))
                && getAfter(/databases/$(database)/documents/users/$(uid)/parties/$(pid)/invites/$(string(request.resource.data.inviteSeq))).data.guestId == gid)
